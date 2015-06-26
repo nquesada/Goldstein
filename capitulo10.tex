@@ -1,0 +1,119 @@
+\documentclass[letterpaper,10pt]{article}
+\usepackage[latin1]{inputenc}
+\usepackage[dvips]{graphicx}
+\usepackage[spanish]{babel}
+
+
+\textwidth = 16.5 cm
+\textheight = 22.9 cm
+\oddsidemargin = 0.0 cm
+\evensidemargin = 0.0 cm
+\topmargin = 0.0 cm
+\headheight = 0.0 cm
+\headsep = 0.0 cm 
+
+%opening
+\title{Ejercicios del cap\'itulo 10 de\\ \emph{Classical Mechanics} de H. Goldstein}
+\author{Nicol\'as Quesada M. \\ {\small \sf Instituto de F\'isica, Universidad de Antioquia}}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+
+\section*{Ejercicio 10.5}
+Se pide mostrar que  $S=\frac{1}{2} m \left(q^2+\alpha ^2\right) \omega  \cot (\omega t)-m q \alpha  \omega  \csc ( \omega t)$ es soluci\'on de la ecuaci\'on de Hamilton-Jacobi para el oscilador arm\'onico. Para este caso dicha ecuaci\'on es:
+$$\frac{1}{2m} \left[\left(\frac{\partial S}{\partial q}  \right)^2+m^2 \omega^2 q^2 \right]+\frac{\partial S}{\partial t}=0$$
+Esto se hace directamente calculando las derivadas que aparecen en la anterior ecuaci\'on:
+$$
+\frac{1}{2m} \left[ \left(\frac{\partial S}{\partial q}  \right)^2+m^2 \omega^2 q^2 \right]=\frac{1}{2m} \left[ (m q \omega  \cot (\omega t)-m \alpha  \omega  \csc (\omega t))^2+m^2 \omega^2 q^2 \right]=\frac{1}{2} m \omega ^2 \left(q^2-2 \alpha  \cos (\omega t)
+   q+\alpha ^2\right) \csc ^2(\omega t)
+$$
+La \'ultima igualdad se obtiene al tener en cuenta que $1+\cot^2 z=\csc^2 z$ y que $\cot z \csc z= \cos z \csc^2 z$. Por otro lado:
+$$
+\frac{\partial S}{\partial t}=-\frac{1}{2} m \omega ^2 \left(q^2-2 \alpha  \cos (t
+   \omega ) q+\alpha ^2\right) \csc ^2(t \omega )
+$$
+Comparando las 2 \'ultimas igualdades se ve que la $S$ dada es efectivamente soluci\'on de la ecuaci\'on de Hamilton-Jacobi.  Conocida $S$ podemos escribir las ecuaciones de transformaci\'on:
+$$
+p=m q \omega \cot (\omega t)-m \alpha  \omega  \csc (t \omega ) \Rightarrow \alpha =q \cos (\omega t)-\frac{p \sin (\omega t)}{m \omega }$$
+$$\beta =m \omega(\alpha \cos (\omega t)-q) \csc (\omega t)$$
+Para mostrar que la $S$ dada genera la soluci\'on correcta del problema del oscilador arm\'onico lo primero que hay que notar que tanto el nuevo momento conjugado $\alpha$ como su coordenada generalizada $\beta$ son constantes de movimiento y por lo tanto podemos escribir:
+$$ 
+\alpha =q \cos (\omega t)-\frac{p \sin (\omega t)}{m \omega }=\alpha(t_0) =q(t_0) \cos (\omega t_0)-\frac{p(t_0) \sin (\omega t_0)}{m \omega }$$
+$$ \beta =m \omega(\alpha \cos (\omega t)-q) \csc (\omega t)=\beta(t_0) =m \omega(\alpha \cos (\omega t_0)-q(t_0)) \csc (\omega t_0)
+$$
+El valor de $\alpha(t_0)$ puede ser sustituido en la \'ultima ecuaci\'on para obtener:
+
+$$
+\cot (t \omega ) \left(\cos (t_0 \omega) q(t_0)-\frac{p(t_0) \sin (t_0 \omega )}{m \omega }\right)-  \csc (t \omega) q =\cot (t_0 \omega ) \left(\cos 
+   (t_0 \omega ) q(t_0)-\frac{p(t_0) \sin (t_0 \omega )}{m \omega }\right)-\csc (t_0 \omega ) q(t_0)$$
+De la anterior ecuaci\'on se puede obtener $q$ asi:
+$$q=\cos ((t-t_0) \omega ) q(t_0)+\frac{p(t_0) \sin ((t-t_0) \omega )}{m \omega }$$
+Para obtener $p$ basta igualar $\alpha=\alpha(t_0)$ despejar $p$ y sustituir la expresi\'on anterior para obtener:
+$$
+p=\csc (t \omega ) (m \omega  \cos (t \omega ) q-m\omega \cos ( \omega t_0) q(t_0)+p(t_0) \sin (t_0 \omega ))
+$$
+$$p=\cos ((t-t_0) \omega ) p(t_0)-m \omega q(t_0) \sin ((t-t_0) \omega )$$
+Que es evidentemente la soluci\'on al problema.
+\section*{Ejercicio 10.6}
+Para solucionar este problema es mejor comenzar escribiendo el lagrangiano:
+$$L=\frac{1}{2}m v^2-\frac{1}{2}k r^2+q \textbf{A}\cdot \textbf{v}$$
+El campo magn\'etico es homogeneo en la direcci\'on $z$ , $\textbf{B}=B \textbf{ k}$ por lo tanto el vector de potencial magn\'etico viene dado:
+
+$$\textbf{A}=\frac{1}{2}\textbf{B}\times \textbf{r}=\frac{1}{2}B \left(-\textbf{i} y+\textbf{j} x \right)=\frac{1}{2}B r \mathbf{u_{\theta}}$$
+Teniendo en cuenta que $v=\dot r \mathbf{u_{r}}+r \dot \theta \mathbf{u_{\theta}} $ entonces el lagrangiano toma la siguiente forma:
+$$L=\frac{1}{2} m (\dot r^2+r^2 \dot \theta^2)-\frac{1}{2}k r^2 +\frac{1}{2} q r^2 \dot \theta$$
+Con el lagrangiano podemos obtener los momentos conjugados generalizados as\'i:
+$$p_r=\frac{\partial L}{\partial \dot r}=m \dot r \Rightarrow \dot r=\frac{p_r}{m}$$
+$$p_{\theta}= \frac{\partial L}{\partial \dot \theta}=\frac{1}{2} B q r^2+m \dot \theta r^2\Rightarrow \dot \theta =\frac{\frac{2 p_\theta}{r^2}-B q}{2m}$$
+Conocidos los momentos conjugados generalizados podemos escribir el Hamiltoniano:
+$$H=\dot \theta p_\theta+\dot r p_r-L=\frac{p_r^2}{2 m}+\frac{B^2 q^2 r^2}{8m}+\frac{1}{2} k r^2-\frac{B q p_\theta}{2 m}+\frac{p_\theta^2}{2 m r^2}=\frac{1}{2m}\left(p_r^2+\left(\frac{p_\theta}{r}-\frac{r q B}{2} \right)^2 + m k r^2\right)$$
+La ecuaci\'on de Hamilton-Jacobi para el presente problema toma la forma:
+$$
+\frac{1}{2m}\left(\left( \frac{\partial S}{\partial r }\right)^2+\left(\frac{\left( \frac{\partial S}{\partial \theta}\right)}{r}-\frac{r q B}{2} \right)^2 + m k r^2\right) +\frac{\partial S }{\partial t}=0$$
+
+Como $\theta$ es una variable c\'iclica es \'util escribir a la funci\'on principal de Hamilton como:
+$$
+S(r,\theta,E,\alpha_\theta,t)=W_r(r,E)+W_\theta(\theta, \alpha_\theta)-E t =W_r(r,\alpha)+\theta \alpha_\theta-E t $$
+sustituyendo en la ecuaci\'on de Hamilton-Jacobi y teniendo en cuenta que $p_\theta=\frac{\partial S}{\partial \theta}=\alpha_\theta$ se obtiene:
+$$
+\frac{1}{2m}\left(\left( \frac{\partial W_r}{\partial r }\right)^2+\left(\frac{\left( \frac{\partial W_s}{\partial \theta}\right)}{r}-\frac{r q B}{2} \right)^2 + m k r^2\right)=\frac{1}{2m}\left(\left( \frac{\partial W_r}{\partial r }\right)^2+\left(\frac{p_\theta}{r}-\frac{r q B}{2} \right)^2 + m k r^2\right)=E
+$$
+la anterior ecuaci\'on puede ser resuelta para $W_r$ asi:
+$$
+W_r=\int \sqrt{2 m E-m k r^2-\left(\frac{p_\theta}{r}-\frac{r q B}{2}  \right)^2}dr$$
+Finalmente obtenemos que la funci\'on principal de Hamilton es:
+$$
+S(r,\theta,E,p_\theta)=\int \sqrt{2 m E-m k r^2-\left(\frac{p_\theta}{r}-\frac{r q B}{2}  \right)^2}dr+\theta p_\theta-E t
+$$
+Note que si $p_\theta(t=0)=0\Rightarrow p_\theta(t)=0$  $\forall t$ (ya que $p_\theta$ es constante de movimiento) la integral para $W_r$ se hace mucho mas sencilla:
+$$
+W_r=\int \sqrt{2 m E-\left(m k +\left(\frac{q B}{2}\right)^2\right)r^2}dr$$
+Al sustituir lo anterior en la funci\'on prinicipal de Hamilton se obtiene:
+$$S= m\int \sqrt{\frac{2 E}{m}-\left(\frac{k}{m} +\left(\frac{q B}{2m}\right)^2\right)r^2}dr-E t=m\int \sqrt{\frac{2 E}{m}-\left(\omega_0^2 +\omega_c^2\right)r^2}dr-E t=$$
+Si $p_\theta=0$ entonces adem\'as 
+$$\dot \theta=\frac{-q B}{2 m}\Rightarrow \theta=\frac{-q B}{2 m} (t-t_0)+\theta(t_0)$$
+Pero $\frac{k}{m}=\omega_0^2$ no es m\'as que la frecuencia "natural" del oscilador arm\'onico y $\frac{q B}{2m}= \omega_c$  es la frecuencia ciclotr\'onica debida al campo magn\'etico. Finalmente se ve que si compara la \'ultima ecuaci\'on con la ecuaci\'on de un oscilador arm\'onico que no este en presencia de campo magn\'etico entonces ambas ecuaciones tienen la misma forma excepto por que en este ejemplo el oscilador se mueve con un frecuencia efectiva $\omega^2=\omega_0^2+\omega_c^2$. Asi entonces radialmente la part\'icula se mueve como un oscilador arm\'onico con frecuencia angular $\omega=\sqrt{\omega_0^2+\omega_c^2}$ y ademas rota con velocidad angular constante $\frac{-q B}{2 m}=\omega_c$.
+
+
+
+
+
+
+
+\section*{Ejercicio 10.13}
+El hamiltoniano del problema viene dado por:
+$$H=E=\frac{p^2}{2m}+F |x|$$
+De la anterior ecuaci\'on podemos obtener a $p$ como funci\'on de $x$ asi:
+$$p=\sqrt{2m}\sqrt{E-F|x|}$$
+Con la anterior ecuaci\'on podemos obtener la variable de acci\'on para el problema:
+$$J=\oint p dx=\oint \sqrt{2m}\sqrt{E-F|x|} dx=4 \sqrt{2m} \int_0^{E/F} \sqrt{E-F|x|} dx=\frac{8 \sqrt{2m}}{3} \frac{E^{3/2}}{F}$$
+La integral ha sido evaluada usando el hecho de que la funci\'on sobre el contorno cerrado de integraci\'on recorre cuatro veces el camino desde $0$ hasta $x=\frac{E}{F}$(que es el punto de retorno) y un sencillo cambio de variable $y=E-F|x|$. De la \'ultima ecuaci\'on se puede obtener a $E=H$ como funci\'on de $J$:
+$$H=\frac{3^{2/3} \left(\frac{F J}{\sqrt{m}}\right)^{2/3}}{4
+   \sqrt[3]{2}}$$
+Con lo anterior en mente y usando que la frecuencia $\nu=\frac{\partial H}{\partial J}$ y que $T=\frac{1}{\nu}=\frac{\partial J}{\partial H}$entonces:
+$$T=\frac{4 \sqrt{ 2 m E}}{F}$$
+
+\end{document}
