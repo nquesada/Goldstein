@@ -1,110 +1,89 @@
-\documentclass[letterpaper,12pt]{article}
-\usepackage[latin1]{inputenc}
-\usepackage[dvips]{graphicx}
-\usepackage[spanish]{babel}
-
-
-\textwidth = 16.5 cm
-\textheight = 23.5 cm
-\oddsidemargin = 0.0 cm
-\evensidemargin = 0.0 cm
-\topmargin = 0.0 cm
-\headheight = 0.0 cm
-\headsep = 0.0 cm 
-
-%opening
-\title{Ejercicios del cap\'itulo 1 de\\ \emph{Classical Mechanics} de H. Goldstein}
-\author{Nicol\'as Quesada M. \\ {\small \sf Instituto de F\'isica, Universidad de Antioquia}}
-\date{}
-\begin{document}
-
-\maketitle
 
 
 
-\section*{Ejercicio 1.6.}
+\subsection*{Ejercicio 1.6.}
 Supongamos que en alg\'un instante $t$ la part\'icula tiene coordenadas $(x',y')$ y que la tangente del \'angulo que forma su velocidad con el eje $x$ esta dada por $\frac{dy(t)}{dx(t)}$. La recta tangente a la curva estar\'a dada por:
-\begin{equation}
+\eq{
 (y-y')=\frac{dy(t)}{dx(t)} (x-x').
-\end{equation}
+}
 Por otro lado seg\'un el problema la velocidad siempre debe apuntar a un punto en el eje $x$, al que llamaremos $f(t)$. Pero este punto no es m\'as que el intercepto con el eje $x$ de la recta anteriormente definida. As\'i entonces debemos tener lo siguiente:
-\begin{eqnarray}
--y'=\frac{dy(t)}{dx(t)} (f(t)-x')\\
-(f(t)-x)dy+y dx=0
-\end{eqnarray}
+\eq{
+-y'&=\frac{dy(t)}{dx(t)} (f(t)-x')\\
+(f(t)-x)dy+y dx&=0
+}
 Que es la ecuaci\'on de una ligadura no-hol\'onoma. Para mostrar que la ligadura es no hol\'onoma se trata de buscar un factor integrante para obtener una diferencial total:
-\begin{eqnarray}
-dF=f_i(f(t)-x)dy+ f_i y dx+f_i \times 0 dt.\\
-\end{eqnarray}
+\eq{
+dF=f_i(f(t)-x)dy+ f_i y dx+f_i \times 0 dt.
+}
 De aqu\'i se lee que:
-\begin{eqnarray}
-\frac{\partial F}{\partial y}=f_i(f(t)-x) \\
-\frac{\partial F}{\partial x}= f_i y\\
-\frac{\partial F}{\partial t}=0.
-\end{eqnarray}
+\eq{
+\frac{\partial F}{\partial y}&=f_i(f(t)-x) \\
+\frac{\partial F}{\partial x}&= f_i y\\
+\frac{\partial F}{\partial t}&=0.
+}
 Haciendo derivadas cruzadas entre $x$ y $t$ 
 (y teniendo en cuenta que $x$ y $y$ dependen de $t$ s\'olo impl\'icitamente):
-\begin{equation}
+\eq{
 \frac{\partial \left(\frac{\partial f_i}{\partial x}\right)}{\partial t}=y \frac{\partial f_i}{\partial t}
-=0.\end{equation}
+=0.
+}
 Tomando derivadas cruzadas de $t$ y $y$ nos queda que:
-\begin{equation}
+\eq{
  0=\frac{\partial \left(\frac{\partial F}{\partial y}\right)}{\partial t}=f_i \frac{\partial f(t)}{\partial t}=0
-\end{equation}
+}
 Asi o bien $f_i=0$ o $f(t)=cte$, pero lo anterior va encontra de las hip\'otesis ya que $f(t)$ es arbitrario.
 
 
-\section*{Ejercicio 1.9 }
+\subsection*{Ejercicio 1.9 }
 Tenemos que el Lagrangiano para una part\'icula en presencia de un campo El\'ectrico 
 $\vec E=\nabla \phi -\frac{\partial \vec A}{\partial t}$
 y un campo magn\'etico  $\vec B=\nabla \times \vec A$ est\'a dado por 
-\begin{equation}
+\eq{
 L = {1 \over 2} m \vec{v} \cdot \vec{v}  - q\phi + {q \over c} \vec{v} \cdot \vec{A} .
-\end{equation}
+}
 Se pregunta que efecto tiene sobre el lagrangiano el cambiar el potencial escalar $\phi$ y el potencial vectorial $\vec A$ 
-\begin{eqnarray}
-\vec A \longmapsto \vec A+\nabla \psi \\
-\phi \longmapsto \phi-\frac{1}{c}\frac{\partial \psi}{\partial t}
-\end{eqnarray}
+\eq{
+\vec A &\longmapsto \vec A+\nabla \psi \\
+\phi &\longmapsto \phi-\frac{1}{c}\frac{\partial \psi}{\partial t}
+}
 sobre el Lagrangiano y las ecuaciones de movimiento de la part\'icula sobre la que act\'uan $\vec E$ y $\vec B$, siendo $\psi(x,y,z,t)$ una funci\'on arbitraria pero diferenciable.
 Si sustituimos en el Lagrangiano y reorganizamos t\'erminos se obtiene lo siguiente:
-\begin{eqnarray}
- L' &=&{1 \over 2} m \vec{v} \cdot \vec{v} -q (\phi-\frac{1}{c}\frac{\partial \psi}{\partial t})+\frac{q}{c}\vec v \cdot  (\vec A+\nabla \psi)\\
- L'&=&({1 \over 2} m \vec{v} \cdot \vec{v}-q \phi+\frac{q}{c}\vec v \cdot  \vec A)+q\frac{1}{c}(\frac{\partial \psi}{\partial t}+\vec v \cdot \nabla \psi)
-\end{eqnarray}
+\eq{
+ L' =&{1 \over 2} m \vec{v} \cdot \vec{v} -q \left(\phi-\frac{1}{c}\frac{\partial \psi}{\partial t}\right)+\frac{q}{c}\vec v \cdot  \left(\vec A+\nabla \psi\right)\\
+ L'=&\left({1 \over 2} m \vec{v} \cdot \vec{v}-q \phi+\frac{q}{c}\vec v \cdot  \vec A\right)+\frac{q}{c}\left(\frac{\partial \psi}{\partial t}+\vec v \cdot \nabla \psi\right)
+}
 El t\'ermino dentro del par\'entesis es el lagrangiano original $L$ y el segundo es la diferencial total  de $\psi$ con respecto a $t$:
-\begin{eqnarray}
+\eq{
 \frac{d \psi}{dt}=\frac{\partial \psi}{\partial x}\frac{dx}{dt}+\frac{\partial \psi}{\partial y}\frac{dy}{dt}+\frac{\partial \psi}{\partial z}\frac{dz}{dt}+\frac{\partial \psi}{\partial t}=\nabla \psi \cdot \vec v+\frac{\partial \psi}{\partial t}
-\end{eqnarray}
+}
 Asi entonces $L'$ se reescribe como $L$ mas la derivada total con respecto a $t$ de una funci\'on arbitraria $\psi$:
-\begin{equation}
+\eq{
 L'=L+\frac{d \psi}{dt}
-\end{equation}
+}
 Pero seg\'un la demostraci\'on 8 Las ecuaciones de Lagrange se siguen satisfaciendo si a un Lagrangiano $L$ se le adiciona la derivada total con respecto al tiempo de una funci\'on arbitraria $\psi$, es decir las ecuaciones de movimiento de la part\'icula no cambian.
 
 
-\section*{Ejercicio 1.19}
+\subsection*{Ejercicio 1.19}
 Usando coordenadas esf\'ericas y teniendo en cuenta que el p\'endulo es inextensible tenemos que la velocidad se puede escribir as\'i:
-\begin{equation}
+\eq{
 \vec v=\frac{d\vec r}{dt}=\frac{dr}{dt}\hat r+r\frac{d\theta}{dt}\hat \theta+r \sin \theta \frac{d\phi}{dt} \hat \phi=r\frac{d\theta}{dt}\hat \theta+r \sin \theta \frac{d\phi}{dt} \hat \phi
-\end{equation}
+}
 y que el potencial gravitacional se puede escribir como (con $z$ positivo hacia abajo):
-\begin{equation}
+\eq{
 V=-mgz=-mgr \cos \theta
-\end{equation}
+}
 Asi el Lagrangiano del sistema es:
-\begin{eqnarray}
-L=\frac{1}{2} m r^2 \left(\sin ^2(\phi ) \dot \theta^2+\dot \phi^2\right) +mgr \cos (\phi ) \\
-\frac{\partial L}{\partial \dot \theta}=m r^2 \dot \theta\\
-\frac{\partial L}{\partial \dot \phi}=m r^2 \sin^2\theta \dot \phi\\
-\frac{\partial L}{\partial \theta}=m r^2 \sin \theta \cos \theta \dot \phi^2-m g r \sin \theta\\
-\frac{\partial L}{\partial \phi}=0
-\end{eqnarray}
+\eq{
+L&=\frac{1}{2} m r^2 \left(\sin ^2(\phi ) \dot \theta^2+\dot \phi^2\right) +mgr \cos (\phi ) \\
+\frac{\partial L}{\partial \dot \theta}&=m r^2 \dot \theta\\
+\frac{\partial L}{\partial \dot \phi}&=m r^2 \sin^2\theta \dot \phi\\
+\frac{\partial L}{\partial \theta}&=m r^2 \sin \theta \cos \theta \dot \phi^2-m g r \sin \theta\\
+\frac{\partial L}{\partial \phi}&=0
+}
 luego las ecuaciones de movimiento son:
-\begin{eqnarray}
+\eq{
 m r^2 \sin \theta \cos \theta \dot \phi^2-m g r \sin \theta-m r^2 \frac{d\dot \theta}{dt}=0\\
-\frac{d }{dt}\left( m r^2 \sin^2\theta \dot \phi\right)=0\\
-\end{eqnarray}
+\frac{d }{dt}\left( m r^2 \sin^2\theta \dot \phi\right)=0
+}
 
 
-\end{document}
