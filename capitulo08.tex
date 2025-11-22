@@ -1,209 +1,213 @@
-
-
 \subsection*{Ejercicio 8.2}
-Supongamos que tenemos un Lagrangiano $L(q_i,\dot q_i,t)$, con su respectivo Hamiltoniano $H$, y momentos conjugados $p_i$. Se desea averiguar como queda el nuevo Hamiltoniano $H'$ y los nuevos momentos conjugados $p_i'$ si se usa un nuevo Lagrangiano $L'=L+\frac{dF}{dt}$ donde $F$ es una funci\'on arbitraria pero diferenciable.
+Supongamos que tenemos un Lagrangiano $L(q_i,\dot q_i,t)$, con su respectivo Hamiltoniano $H$, y momentos conjugados $p_i$. Se desea averiguar c\'omo queda el nuevo Hamiltoniano $H'$ y los nuevos momentos conjugados $p_i'$ si se usa un nuevo Lagrangiano $L'=L+\frac{dF}{dt}$, donde $F$ es una funci\'on arbitraria pero diferenciable.
 Los nuevos momentos generalizados vienen dados por:
 \eq{
-p'_i=\frac{\partial L'(q_i,\dot q_i,t)}{\partial \dot q_i}=\frac{\partial L}{\partial \dot q_i}+\frac{\partial \left(\frac{dF}{dt} \right)}{\partial \dot q_i}
+p'_i=\frac{\partial L'(q_i,\dot q_i,t)}{\partial \dot q_i}=\frac{\partial L}{\partial \dot q_i}+\frac{\partial \left(\frac{dF}{dt} \right)}{\partial \dot q_i}.
 }
-Pero el \'ultimo t\'ermino puede transformarse asi: (Suma sobre \'indices repetidos):
+Pero el \'ultimo t\'ermino puede transformarse as\'i (suma sobre \'indices repetidos):
 \eq{
-\frac{\partial \left(\frac{dF}{dt} \right)}{\partial \dot q_i}=\frac{\partial \left( \frac{\partial F}{\partial q_j} \dot q_j+\frac{\partial F}{\partial t} \right)}{\partial \dot q_i}=\frac{\partial F}{\partial q_i}
+\frac{\partial \left(\frac{dF}{dt} \right)}{\partial \dot q_i}=\frac{\partial \left( \frac{\partial F}{\partial q_j} \dot q_j+\frac{\partial F}{\partial t} \right)}{\partial \dot q_i}=\frac{\partial F}{\partial q_i}.
 }
-Teniendo en cuanto lo anterior y que $p_i=\frac{\partial L(q_i,\dot q_i,t)}{\partial \dot q_i}$ tenemos que:
+Teniendo en cuenta lo anterior y que $p_i=\frac{\partial L(q_i,\dot q_i,t)}{\partial \dot q_i}$, tenemos que:
 \eq{
-p'_i=p_i+\frac{\partial F}{\partial q_i}
+p'_i=p_i+\frac{\partial F}{\partial q_i}.
 }
 El nuevo Hamiltoniano est\'a dado por: 
 \eq{
-H'&=\dot q_i p'_i-L'=\dot q_i \left(p_i+\frac{\partial F}{\partial q_i}\right)-L-\frac{dF}{dt}=\dot q_i \left(p_i+\frac{\partial F}{\partial q_i}\right)-L-\left(\frac{\partial F}{\partial q_i} \dot q_i+\frac{\partial F}{\partial t}\right)\\
-H'&=\dot q_i p_i-L-\frac{\partial F}{\partial t}=H-\frac{\partial F}{\partial t}
+H'&=\dot q_i p'_i-L'=\dot q_i \left(p_i+\frac{\partial F}{\partial q_i}\right)-L-\frac{dF}{dt}=\dot q_i \left(p_i+\frac{\partial F}{\partial q_i}\right)-L-\left(\frac{\partial F}{\partial q_i} \dot q_i+\frac{\partial F}{\partial t}\right),\\
+H'&=\dot q_i p_i-L-\frac{\partial F}{\partial t}=H-\frac{\partial F}{\partial t}.
 }
-Para mostrar que las ecuaciones que se obtienen con este nuevo Hamiltoniano para $p_i'$ y $q_i$ tienen la misma forma que las que se obtienen para $p_i$ y $q_i$ atrav\'es del Hamiltoniano original escribamos el principio de Hamilton para el antiguo Hamiltoniano $H$ teniendo en cuenta la adici\'on de $\frac{dF}{dt}$:\\
+Para mostrar que las ecuaciones que se obtienen con este nuevo Hamiltoniano para $p_i'$ y $q_i$ tienen la misma forma que las que se obtienen para $p_i$ y $q_i$ a trav\'es del Hamiltoniano original, escribamos el principio de Hamilton para el antiguo Hamiltoniano $H$ teniendo en cuenta la adici\'on de $\frac{dF}{dt}$:
 \eq{
-\delta I&=\delta \int_{t_1}^{t_2} L+\frac{dF}{dt}dt=\delta \int_{t_1}^{t_2}\left(p_i \dot q_i-H+\frac{dF}{dt}\right)dt\\
-&=\delta \int_{t_1}^{t_2}\left(p_i \dot q_i-H+\frac{\partial F}{\partial q_i} \dot q_i+\frac{\partial F}{\partial t}\right)dt  \nonumber
+\delta I&=\delta \int_{t_1}^{t_2} L+\frac{dF}{dt}\,dt=\delta \int_{t_1}^{t_2}\left(p_i \dot q_i-H+\frac{dF}{dt}\right)dt,\\
+&=\delta \int_{t_1}^{t_2}\left(p_i \dot q_i-H+\frac{\partial F}{\partial q_i} \dot q_i+\frac{\partial F}{\partial t}\right)dt.  \nonumber
 }
 Los t\'erminos dentro de la integral se pueden reorganizar para obtener:
-\eq{\delta \int_{t_1}^{t_2}\left(\left(p_i+\frac{\partial F}{\partial q_i} \right)\dot q_i-\left(H- \frac{\partial F}{\partial t}\right)\right)dt}
-Pero el primer par\'entesis resulta ser $p_i'$ y el segundo $H'$ asi:
-\eq{\delta \int_{t_1}^{t_2}\left(p_i'\dot q_i-H'\right)dt}
-En este punto podemos asumir que $H'$ esta escrito en t\'erminos de las $q_i$ y las nuevas $p_i'$ y asi podemos usar las ecuaciones de Euler-Lagrange para hallar:
 \eq{
-\frac{d}{dt}\left( \frac{\partial f}{\partial \dot q_i}\right)-\frac{\partial f}{\partial q_i}&=\dot p_i'+\frac{\partial H'}{\partial q_i}=0\\
-\frac{d}{dt}\left( \frac{\partial f}{\partial \dot p_i'}\right)-\frac{\partial f}{\partial p_i'}&=\dot q_i-\frac{\partial H'}{\partial p_i'}=0
+\delta \int_{t_1}^{t_2}\left(\left(p_i+\frac{\partial F}{\partial q_i} \right)\dot q_i-\left(H- \frac{\partial F}{\partial t}\right)\right)dt.
 }
-Que son las ecuaciones de Hamilton para las variables $\left(q_i,p_i'\right)$\\
-\\
+Pero el primer par\'entesis resulta ser $p_i'$ y el segundo $H'$, as\'i:
+\eq{
+\delta \int_{t_1}^{t_2}\left(p_i'\dot q_i-H'\right)dt.
+}
+En este punto podemos asumir que $H'$ est\'a escrito en t\'erminos de las $q_i$ y las nuevas $p_i'$, y as\'i podemos usar las ecuaciones de Euler-Lagrange para hallar:
+\eq{
+\frac{d}{dt}\left( \frac{\partial f}{\partial \dot q_i}\right)-\frac{\partial f}{\partial q_i}&=\dot p_i'+\frac{\partial H'}{\partial q_i}=0,\\
+\frac{d}{dt}\left( \frac{\partial f}{\partial \dot p_i'}\right)-\frac{\partial f}{\partial p_i'}&=\dot q_i-\frac{\partial H'}{\partial p_i'}=0.
+}
+Que son las ecuaciones de Hamilton para las variables $\left(q_i,p_i'\right)$.
 
-Para el resto de ejercicios $a'$ denota la derivada total de la variable $a$ con respecto al tiempo $t$.\\
-
+Para el resto de ejercicios, $a'$ denota la derivada total de la variable $a$ con respecto al tiempo $t$.
 
 \subsection*{Ejercicio 8.9}
-Para este problema se hace un procedimiento an\'alogo al que se hace en la formulaci\'on lagrangiana. Asi entonces
+Para este problema se hace un procedimiento an\'alogo al que se hace en la formulaci\'on lagrangiana. As\'i entonces:
 \eq{
-\delta S=\delta \int_{t_1}^{t_2} q_i' p_i-H\left(q_j,p_j,t\right)-\lambda_i \psi_i\left(q_j,p_j,t\right)dt
+\delta S=\delta \int_{t_1}^{t_2} q_i' p_i-H\left(q_j,p_j,t\right)-\lambda_i \psi_i\left(q_j,p_j,t\right)\,dt.
 }
-La variaci\'on se puede hacer  ahora con $n$ $\delta q_i$, $n$ $\delta p_i$ y $m$ $\lambda_i$.
-Para esta problema las $2n$ ecuaciones de Euler-Lagrange de interes son (siendo $f$ el integrando de la ecuaci\'on anterior y $k=1,...,n$):
+La variaci\'on se puede hacer ahora con $n$ $\delta q_i$, $n$ $\delta p_i$ y $m$ $\lambda_i$.
+Para este problema las $2n$ ecuaciones de Euler-Lagrange de inter\'es son (siendo $f$ el integrando de la ecuaci\'on anterior y $k=1,\dots,n$):
 \eq{
-\frac{d}{dt}\left( \frac{\partial f}{\partial q_k'}\right)-\frac{\partial f}{\partial q_k}&=0\\
-\frac{d}{dt}\left( \frac{\partial f}{\partial p_k'}\right)-\frac{\partial f}{\partial p_k}&=0
+\frac{d}{dt}\left( \frac{\partial f}{\partial q_k'}\right)-\frac{\partial f}{\partial q_k}&=0,\\
+\frac{d}{dt}\left( \frac{\partial f}{\partial p_k'}\right)-\frac{\partial f}{\partial p_k}&=0.
 }
 Sustituyendo para las primeras $n$ ecuaciones obtenemos:
 \eq{
 \frac{d}{dt}\left( \frac{\partial \left(q_i' p_i-H\left(q_j,p_j,t\right)-\lambda_i \psi_i\left(q_j,p_j,t\right)\right)}{\partial q_k'}\right) & \nonumber \\
--\frac{\partial \left(q_i' p_i-H\left(q_j,p_j,t\right)-\lambda_i \psi_i\left(q_j,p_j,t\right)\right)}{\partial q_k}&=0\\
-\frac{d p_k}{dt}-\left(\frac{\partial \left(-H\left(q_j,p_j,t\right)-\lambda_i \psi_i\left(q_j,p_j,t\right)\right)}{\partial q_k}\right)&=0
+-\frac{\partial \left(q_i' p_i-H\left(q_j,p_j,t\right)-\lambda_i \psi_i\left(q_j,p_j,t\right)\right)}{\partial q_k}&=0,\\
+\frac{d p_k}{dt}-\left(\frac{\partial \left(-H\left(q_j,p_j,t\right)-\lambda_i \psi_i\left(q_j,p_j,t\right)\right)}{\partial q_k}\right)&=0.
 }
-Reorganizando t\'erminos  y teniendo en cuenta que hay suma sobre el \'indice repetido $i$ nos queda:
+Reorganizando t\'erminos y teniendo en cuenta que hay suma sobre el \'indice repetido $i$, nos queda:
 \eq{
--p'_k=\frac{\partial H}{\partial q_k}+\lambda_i \frac{\partial \psi_i\left(q_j,p_j,t\right)}{\partial q_k}
+-p'_k=\frac{\partial H}{\partial q_k}+\lambda_i \frac{\partial \psi_i\left(q_j,p_j,t\right)}{\partial q_k}.
 }
 Para las restantes $n$ ecuaciones tenemos:
 \eq{
 \frac{d}{dt}\left( \frac{\partial \left(q_i' p_i-H\left(q_j,p_j,t\right)-\lambda_i \psi_i\left(q_j,p_j,t\right)\right)}{\partial p_k'}\right)\\
-\quad \quad -\frac{\partial \left(q_i' p_i-H\left(q_j,p_j,t\right)-\lambda_i \psi_i\left(q_j,p_j,t\right)\right)}{\partial p_k}=0
+\quad \quad -\frac{\partial \left(q_i' p_i-H\left(q_j,p_j,t\right)-\lambda_i \psi_i\left(q_j,p_j,t\right)\right)}{\partial p_k}=0.
 \nonumber}
-Reorganizando los t\'erminos tenemos (De nuevo suma sobre $i$):
-\eq{0-\left(q'_k-\frac{\partial H}{\partial p_k}-\lambda_i \frac{\partial \psi_i\left(q_j,p_j,t\right)}{\partial p_k}\right)=0\\
-q'_k =\frac{\partial H}{\partial p_k}+\lambda_i \frac{\partial \psi_i\left(q_j,p_j,t\right)}{\partial p_k} 
+Reorganizando los t\'erminos tenemos (de nuevo suma sobre $i$):
+\eq{
+0-\left(q'_k-\frac{\partial H}{\partial p_k}-\lambda_i \frac{\partial \psi_i\left(q_j,p_j,t\right)}{\partial p_k}\right)=0,\\
+q'_k =\frac{\partial H}{\partial p_k}+\lambda_i \frac{\partial \psi_i\left(q_j,p_j,t\right)}{\partial p_k}.
 }
 
-\subsection*{Ejercicio 8.12}
-Usando la convenci\'on usada en el cap\'itulo 2 el lagrangiano del sistema se puede escribir como:
-\eq{ L=\frac{m_1+m_2}{2} \textbf{r'}^2+\frac{1}{2}\frac{m_1 m_2}{m_1+m_2} \textbf{R'}^2-U\left(R\right)}
-Usando coordenadas esfericas $R,\theta,\phi$ para $\textbf{R}$ y coordenadas rectangulares $x,y,z$ para $\textbf{r}$ y llamando $\mu$=$\frac{m_1 m_2}{m_1+m_2}$ y $M=m_1+m_2$ tenemos:
-\eq{L=\frac{\mu}{2}\left(R'^2+R^2 \theta'^2+R^2 \sin^2 \left(\theta\right) \phi'^2\right)+\frac{M}{2}\left(x'^2+y'^2+z'^2\right)-U\left(R\right)}
 
-De lo anterior se ve facilmente que el Hamiltoniano del sistema es:
-\eq{H=\frac{1}{2\mu}\left(p_R^2+\frac{ p_\theta^2}{R^2}+\frac{p_\phi^2}{R^2 \sin^2 \left(\theta\right)}\right)+\frac{1}{2 M}\left(p_x^2+p_y^2+p_z^2\right)+U\left(R\right)}
-Ahora obtegamos la ecuaciones de Hamilton para $p_x, p_y ,p_z, x, y ,z$ que son:
+\subsection*{Ejercicio 8.12}
+Usando la convenci\'on usada en el cap\'itulo 2, el lagrangiano del sistema se puede escribir como:
 \eq{
-p_x'&=-\frac{\partial H}{\partial x}=0\Rightarrow p_x=c_1\\
-p_y'&=-\frac{\partial H}{\partial y}=0\Rightarrow p_y=c_2\\
-p_z'&=-\frac{\partial H}{\partial z}=0\Rightarrow p_z=c_3\\
-x'&=\frac{\partial H}{\partial p_x}=p_x/M\Rightarrow x=x_0+\left(p_x/M\right)t\\
-y'&=\frac{\partial H}{\partial p_y}=p_x/M\Rightarrow y=y_0+\left(p_y/M\right)t\\
-z'&=\frac{\partial H}{\partial p_z}=p_x/M\Rightarrow z=z_0+\left(p_z/M\right)t
+L=\frac{m_1+m_2}{2} \textbf{r'}^2+\frac{1}{2}\frac{m_1 m_2}{m_1+m_2} \textbf{R'}^2-U\left(R\right).
+}
+Usando coordenadas esf\'ericas $R,\theta,\phi$ para $\textbf{R}$ y coordenadas rectangulares $x,y,z$ para $\textbf{r}$, y llamando $\mu=\frac{m_1 m_2}{m_1+m_2}$ y $M=m_1+m_2$, tenemos:
+\eq{
+L=\frac{\mu}{2}\left(R'^2+R^2 \theta'^2+R^2 \sin^2 \left(\theta\right) \phi'^2\right)+\frac{M}{2}\left(x'^2+y'^2+z'^2\right)-U\left(R\right).
+}
+
+De lo anterior se ve f\'acilmente que el Hamiltoniano del sistema es:
+\eq{
+H=\frac{1}{2\mu}\left(p_R^2+\frac{ p_\theta^2}{R^2}+\frac{p_\phi^2}{R^2 \sin^2 \left(\theta\right)}\right)+\frac{1}{2 M}\left(p_x^2+p_y^2+p_z^2\right)+U\left(R\right).
+}
+Ahora obtengamos las ecuaciones de Hamilton para $p_x, p_y, p_z, x, y, z$, que son:
+\eq{
+p_x'&=-\frac{\partial H}{\partial x}=0\Rightarrow p_x=c_1,\\
+p_y'&=-\frac{\partial H}{\partial y}=0\Rightarrow p_y=c_2,\\
+p_z'&=-\frac{\partial H}{\partial z}=0\Rightarrow p_z=c_3,\\
+x'&=\frac{\partial H}{\partial p_x}=p_x/M\Rightarrow x=x_0+\left(p_x/M\right)t,\\
+y'&=\frac{\partial H}{\partial p_y}=p_y/M\Rightarrow y=y_0+\left(p_y/M\right)t,\\
+z'&=\frac{\partial H}{\partial p_z}=p_z/M\Rightarrow z=z_0+\left(p_z/M\right)t.
 }
 Con lo anterior nos hemos librado de la mitad de las variables y podemos escribir el Hamiltoniano de la siguiente manera:
 \eq{
- H=\frac{1}{2\mu}\left(p_R^2+\frac{ p_\theta^2}{R^2}+\frac{p_\phi^2}{R^2 \sin^2 \left(\theta\right)}\right)+U\left(R\right)+c
+H=\frac{1}{2\mu}\left(p_R^2+\frac{ p_\theta^2}{R^2}+\frac{p_\phi^2}{R^2 \sin^2 \left(\theta\right)}\right)+U\left(R\right)+c,
 }
-Donde $c=\frac{1}{2 M}\left(p_x^2+p_y^2+p_z^2\right)$. De ahora en adelante dicha constante se omitira ya que no afecta las ecuaciones de movimiento de las dem\'as variables. En el anterior Hamiltoniano la variable $\phi$ es c\'iclica por lo que $p_\phi=l_z$ es constante de movimiento y asi:
+donde $c=\frac{1}{2 M}\left(p_x^2+p_y^2+p_z^2\right)$. De ahora en adelante dicha constante se omitir\'a ya que no afecta las ecuaciones de movimiento de las dem\'as variables. En el anterior Hamiltoniano la variable $\phi$ es c\'iclica, por lo que $p_\phi=l_z$ es constante de movimiento y as\'i:
 \eq{
-H&=\frac{1}{2\mu}\left(p_R^2+\frac{ p_\theta^2}{R^2}+\frac{l_z^2}{R^2 \sin^2 \left(\theta\right)}\right)+U\left(R\right)\\
-&= \frac{1}{2\mu}\left(p_R^2+\frac{1}{R^2}\left(p_\theta^2+\frac{l_z^2}{\sin^2 \left(\theta\right)}\right)\right)+U\left(R\right)\\
-&=\frac{1}{2\mu} \left(p_R^2+\frac{f\left(\theta,p_\theta\right)}{R^2}\right)+U\left(R\right)
+H&=\frac{1}{2\mu}\left(p_R^2+\frac{ p_\theta^2}{R^2}+\frac{l_z^2}{R^2 \sin^2 \left(\theta\right)}\right)+U\left(R\right),\\
+&=\frac{1}{2\mu}\left(p_R^2+\frac{1}{R^2}\left(p_\theta^2+\frac{l_z^2}{\sin^2 \left(\theta\right)}\right)\right)+U\left(R\right),\\
+&=\frac{1}{2\mu} \left(p_R^2+\frac{f\left(\theta,p_\theta\right)}{R^2}\right)+U\left(R\right).
 }
-Ahora como en ves de $\theta$ y $p_\theta$ por separado aparece una funci\'on  $f\left(\theta,p_\theta\right)$ de las dos esta debe ser una constante de movimientom \emph{i.e.} 
+Ahora, como en vez de $\theta$ y $p_\theta$ por separado aparece una funci\'on $f\left(\theta,p_\theta\right)$ de las dos, esta debe ser una constante de movimiento, \emph{i.e.}:
 \eq{
-f\left(\theta,p_\theta\right)=L^2=p_\theta^2+\frac{l_z^2}{\sin^2 \left(\theta\right)}=k
+f\left(\theta,p_\theta\right)=L^2=p_\theta^2+\frac{l_z^2}{\sin^2 \left(\theta\right)}=k.
 }
-De la anterior ecuaci\'on podemos obtener $p_\theta$ en t\'erminos de $\theta$ asi:
+De la anterior ecuaci\'on podemos obtener $p_\theta$ en t\'erminos de $\theta$ as\'i:
 \eq{
-p_\theta=\pm \sqrt{L^2-\frac{l_z^2}{\sin^2\left(\theta\right)}}
+p_\theta=\pm \sqrt{L^2-\frac{l_z^2}{\sin^2\left(\theta\right)}}.
 } 
-y ademas podemos escribir el Hamiltoniano asi:
+Y adem\'as podemos escribir el Hamiltoniano as\'i:
 \eq{
-H=\frac{1}{2\mu}\left(p_r^2+\frac{L^2}{R^2}\right)+U\left(r\right)
+H=\frac{1}{2\mu}\left(p_R^2+\frac{L^2}{R^2}\right)+U\left(R\right).
 }
-Finalmente podemos obtener $p_R$ en funci\'on de $r$ como ($H=E=$ constante de Movimiento):
+Finalmente podemos obtener $p_R$ en funci\'on de $R$ como ($H=E=$ constante de movimiento):
 \eq{
-p_R=\pm \sqrt{2 \mu \left(H-U\left(r\right)-\frac{L^2}{2 R^2}\right)}=\pm \sqrt{2 \mu \left(E-U\left(r\right)-\frac{L^2}{2 R^2}\right)}  
+p_R=\pm \sqrt{2 \mu \left(H-U\left(R\right)-\frac{L^2}{2 R^2}\right)}=\pm \sqrt{2 \mu \left(E-U\left(R\right)-\frac{L^2}{2 R^2}\right)}.
 }
 
 Con lo anterior en mente podemos escribir las restantes ecuaciones de Hamilton:
 \eq{
-p_R'&=-\frac{\partial H}{\partial R}=\frac{L^2}{\mu R^3}-\frac{\partial U}{\partial R}\Rightarrow p_R-p_{R_0}=\int_{0}^{t} \frac{L^2}{\mu R^3}-\frac{\partial U}{\partial R} dt\\
-p_\theta'&=-\frac{\partial H}{\partial \theta}=\frac{\cos\left(\theta\right)}{\sin^3\left(\theta\right)}\frac{l_z^2}{\mu R^2}\Rightarrow p_\theta-p_{\theta_0}=\int_{0}^{t} \frac{\cos\left(\theta\right)}{\sin^3\left(\theta\right)}\frac{l_z^2}{\mu R^2} dt\\
-p_\phi'&=-\frac{\partial H}{\partial \phi}=0\Rightarrow p_\phi=l_z\\
-R'&=\frac{\partial H}{\partial p_R}=\frac{p_r}{\mu} \Rightarrow t=\int_{R_0}^{R} \frac{dR}{\sqrt{\frac{2 }{\mu}\left(E-U-\frac{L^2}{2mR^2}\right)}}\\
-\theta'&=\frac{\partial H}{\partial p_\theta}=\frac{p_\theta}{\left(R^2 \mu\right)}\Rightarrow \int_0^t \frac{dt}{\mu R^2}=\int_{\theta_0}^{\theta}\frac{d\theta}{\sqrt{L^2-\frac{l_z^2}{\sin^2{\theta}}}}\\
-\phi'&=\frac{\partial H}{\partial p_\phi}=\frac{l_z}{\left(\mu R^2 \sin^2\left(\theta\right)\right)}\Rightarrow \phi-\phi_0=l_z \int_0^t \frac{dt}{m R^2 \sin^2\left(\theta\right)}
+p_R'&=-\frac{\partial H}{\partial R}=\frac{L^2}{\mu R^3}-\frac{\partial U}{\partial R}\Rightarrow p_R-p_{R_0}=\int_{0}^{t} \frac{L^2}{\mu R^3}-\frac{\partial U}{\partial R}\,dt,\\
+p_\theta'&=-\frac{\partial H}{\partial \theta}=\frac{\cos\left(\theta\right)}{\sin^3\left(\theta\right)}\frac{l_z^2}{\mu R^2}\Rightarrow p_\theta-p_{\theta_0}=\int_{0}^{t} \frac{\cos\left(\theta\right)}{\sin^3\left(\theta\right)}\frac{l_z^2}{\mu R^2}\,dt,\\
+p_\phi'&=-\frac{\partial H}{\partial \phi}=0\Rightarrow p_\phi=l_z,\\
+R'&=\frac{\partial H}{\partial p_R}=\frac{p_R}{\mu} \Rightarrow t=\int_{R_0}^{R} \frac{dR}{\sqrt{\frac{2 }{\mu}\left(E-U-\frac{L^2}{2 R^2}\right)}},\\
+\theta'&=\frac{\partial H}{\partial p_\theta}=\frac{p_\theta}{\mu R^2}\Rightarrow \int_0^t \frac{dt}{\mu R^2}=\int_{\theta_0}^{\theta}\frac{d\theta}{\sqrt{L^2-\frac{l_z^2}{\sin^2{\theta}}}},\\
+\phi'&=\frac{\partial H}{\partial p_\phi}=\frac{l_z}{\mu R^2 \sin^2\left(\theta\right)}\Rightarrow \phi-\phi_0=l_z \int_0^t \frac{dt}{\mu R^2 \sin^2\left(\theta\right)}.
 }
-Note que una vez realizada la integral correspodiente a $R'$ y obtenido $R\left(t\right)$ en forma explicita este se puede reemplazar en la integral correspodiente a $\theta'$ y asi obtener $\theta$ como funci\'on explicita de $t$. Con estas dos variables conocidas se puede sustituir en la ecuaciones de las dem\'as variables, realizar las respectivas integraciones e inversiones y resolver el problema completamente.
-
-
-
+Note que una vez realizada la integral correspondiente a $R'$ y obtenido $R\left(t\right)$ en forma expl\'icita, este se puede reemplazar en la integral correspondiente a $\theta'$ y as\'i obtener $\theta$ como funci\'on expl\'icita de $t$. Con estas dos variables conocidas se puede sustituir en las ecuaciones de las dem\'as variables, realizar las respectivas integraciones e inversiones y resolver el problema completamente.
 
 \subsection*{Ejercicio 8.14}
 Sea $L=a x'^2+\frac{b y'}{x}+c x' y'+ f y^2x' z' +g y'-k \sqrt{x^2+y^2}$. De este obtenemos los momentos conjugados:
 \eq{
-p_x&=f z' y^2+2 a x'+c y'\\
-p_y&=\frac{b}{x}+g+c x' \\
-p_z&=f y^2 x'
+p_x&=f z' y^2+2 a x'+c y',\\
+p_y&=\frac{b}{x}+g+c x',\\
+p_z&=f y^2 x'.
 }
 Con estos podemos obtener el Hamiltoniano:
 \eq{
-H=&q_i' p_i-L=\left(f x' z' y^2+\left(\frac{b}{x}+g+c x'\right) y'+x' \left(f z' y^2+2 a x'+c y'\right)\right)\\
+H&=q_i' p_i-L=\left(f x' z' y^2+\left(\frac{b}{x}+g+c x'\right) y'+x' \left(f z' y^2+2 a x'+c y'\right)\right)\\
 &-\left(a x'^2+\frac{b y'}{x}+c x' y'+ f y^2x' z' +g y'-k \sqrt{x^2+y^2}\right)\nonumber\\
-H=&\left(2 f x' z' y^2+2 a x'^2+g y'+2 c x' y'+\frac{b y'}{x}\right)\\
+H&=\left(2 f x' z' y^2+2 a x'^2+g y'+2 c x' y'+\frac{b y'}{x}\right)\\
 &-\left(a x'^2+\frac{b y'}{x}+c x' y'+ f y^2x' z' +g y'-k \sqrt{x^2+y^2}\right)\nonumber\\
-H=&a x'^2+\left(f z' y^2+c y'\right) x'+k \sqrt{x^2+y^2}
+H&=a x'^2+\left(f z' y^2+c y'\right) x'+k \sqrt{x^2+y^2}.
 }
-Aunque la transformaci\'on (lineal) que manda a las velocidades en los momentos no tiene inversa lo que si se puede hacer es de la ecuaci\'on de $p_x$ despejar $y'$ y de la de $p_z$ a $x'$ para obtener:
+Aunque la transformaci\'on (lineal) que manda a las velocidades en los momentos no tiene inversa, lo que s\'i se puede hacer es, de la ecuaci\'on de $p_x$, despejar $y'$ y de la de $p_z$ a $x'$ para obtener:
 \eq{
-y'&=\frac{-f z' y^2+p_x-2 a x'}{c}=\frac{-f z' y^2+p_x-2 a \frac{p_z}{f y^2}}{c}\\
-x'&=\frac{p_z}{f y^2}
+y'&=\frac{-f z' y^2+p_x-2 a x'}{c}=\frac{-f z' y^2+p_x-2 a \frac{p_z}{f y^2}}{c},\\
+x'&=\frac{p_z}{f y^2}.
 }
-
-y sustituirlos en la ecuaci\'on del Hamiltoniano:
+Y sustituirlos en la ecuaci\'on del Hamiltoniano:
 \eq{
-H&=a x'^2+\left(f z' y^2+c \frac{-f z' y^2+p_x-2 a x'}{c}\right) x'+k \sqrt{x^2+y^2}\\
-H&=\frac{a p_z^2}{f^2 y^4}+\frac{\left(p_x-\frac{2 a p_z}{f y^2}\right) p_z}{f y^2}+k \sqrt{x^2+y^2}\\
-H&=-\frac{a p_z^2}{f^2 y^4}+\frac{p_x p_z}{f y^2}+k \sqrt{x^2+y^2}
+H&=a x'^2+\left(f z' y^2+c \frac{-f z' y^2+p_x-2 a x'}{c}\right) x'+k \sqrt{x^2+y^2},\\
+H&=\frac{a p_z^2}{f^2 y^4}+\frac{\left(p_x-\frac{2 a p_z}{f y^2}\right) p_z}{f y^2}+k \sqrt{x^2+y^2},\\
+H&=-\frac{a p_z^2}{f^2 y^4}+\frac{p_x p_z}{f y^2}+k \sqrt{x^2+y^2}.
 }
-Este Hamiltoniano no depende ni de $p_y$ ni de $z$, por lo tanto $y=c$ y $p_z=k$ son constantes de movimiento. Adem\'as $H$ no depende explicitamente de $t$ por lo tanto $H$ tambien es constante de movimiento
+Este Hamiltoniano no depende ni de $p_y$ ni de $z$, por lo tanto $y=c$ y $p_z=k$ son constantes de movimiento. Adem\'as, $H$ no depende expl\'icitamente de $t$, por lo tanto $H$ tambi\'en es constante de movimiento.
 
 
 \subsection*{Ejercicio 8.19}
-Del dibujo se ve que la posici\'on del cuerpo puede ser escrita asi:
+Del dibujo se ve que la posici\'on del cuerpo puede ser escrita as\'i:
 \eq{
-\tilde{x}&=l \sin \left(\theta \right)+x\\
-\tilde{z}&=-l \cos \left(\theta \right)+z=a x^2-l \cos \left(\theta \right)
+\tilde{x}&=l \sin \left(\theta \right)+x,\\
+\tilde{z}&=-l \cos \left(\theta \right)+z=a x^2-l \cos \left(\theta \right).
 }
 Donde $\theta$ es el \'angulo que forma el eje del p\'endulo con la vertical. As\'i el lagrangiano toma la siguiente forma:
 \eq{
-L=\frac{1}{2} m \left(\tilde{x}'^2+\tilde{z}'^2\right)-m g \tilde{z}
+L=\frac{1}{2} m \left(\tilde{x}'^2+\tilde{z}'^2\right)-m g \tilde{z}.
 }
-Usando como coordenadas generalizadas $x$ y $\theta $ se reescribe asi:
+Usando como coordenadas generalizadas $x$ y $\theta$, se reescribe as\'i:
 \eq{
 \frac{1}{2} m \left(\left(x'+l \cos \left(\theta \right) \theta '\right)^2+\left(2 a x x'+l
-   \sin \left(\theta \right) \theta '\right)^2\right)- m g \left(a x^2-l \cos \left(\theta \right)\right)
+   \sin \left(\theta \right) \theta '\right)^2\right)- m g \left(a x^2-l \cos \left(\theta \right)\right).
 }
 Expandiendo:
 \eq{
 L=&2 a^2 m x'^2 x^2-a g m x^2+2 a l m \sin \left(\theta \right) x' \theta ' x+\frac{1}{2}
    m x'^2\\ 
 &+\frac{1}{2} l^2 m \cos ^2\left(\theta \right) \theta '^2+\frac{1}{2} l^2 m \sin ^2\left(\theta
-   \right) \theta '^2+g l m \cos \left(\theta \right)+l m \cos \left(\theta \right) x' \theta '\nonumber
+   \right) \theta '^2+g l m \cos \left(\theta \right)+l m \cos \left(\theta \right) x' \theta '.\nonumber
 }
-Lo que puede ser reescrito asi:
+Lo que puede ser reescrito as\'i:
 \eq{
-L=L_0+\frac{1}{2} \textbf{q'}^T T \textbf{q'}
+L=L_0+\frac{1}{2} \textbf{q'}^T T \textbf{q'},
 }
 con:
 \eq{
 \textbf{q'}&=\left(
-\begin{array}{l}%[pos]{spalten}
+\begin{array}{l}
 x'\\
 \theta'
-\end{array} \right)\\
+\end{array} \right),\\
 T&=
 \left(
 \begin{array}{ll}
  4 a^2 m x^2+m & l m \cos \left(\theta \right)+2 a l m \sin \left(\theta \right) x \\
  l m \cos \left(\theta \right)+2 a l m \sin \left(\theta \right) x & l^2 m
 \end{array}
-\right)\\
-L_0&=g l m \cos \left(\theta \right)-a g m x^2 
+\right),\\
+L_0&=g l m \cos \left(\theta \right)-a g m x^2.
 }
 
-Para hallar el Hamiltoniano se usa el procedimiento  de la ecuaci\'on 8.27 p\'agina 340 cap\'itulo 8:
+Para hallar el Hamiltoniano se usa el procedimiento de la ecuaci\'on 8.27, p\'agina 340, cap\'itulo 8:
 \eq{
-H\left(q,p,t\right)=\frac{1}{2} \textbf{p}^T T^{-1} \textbf{p}-L_0\left(q,t\right)
+H\left(q,p,t\right)=\frac{1}{2} \textbf{p}^T T^{-1} \textbf{p}-L_0\left(q,t\right).
 }
 Para este caso la inversa de $T$ es:
 \eq{
@@ -212,50 +216,47 @@ T^{-1}=&\frac{1}{\det\left(T\right)} \left(
  l^2 m & -2 a l m \sin \left(\theta \right) x-l m \cos \left(\theta \right) \\
  -2 a l m \sin \left(\theta \right) x-l m \cos \left(\theta \right) & 4 a^2 m x^2+m
 \end{array}
-\right)\\
+\right),\\
 \det\left(T\right)=&l^2 m^2-l^2 \cos ^2\left(\theta \right) m^2+4 a^2 l^2 x^2 m^2-4 a^2 l^2 \sin ^2\left(\theta \right) x^2
    m^2\\
-&-4 a l^2 \cos \left(\theta \right) \sin \left(\theta \right) x m^2 \nonumber\\
-\det\left(T\right)=&m^2 l^2 \left(\sin\left(\theta\right)^2+4 a^2 x^2 \cos^2\left(\theta\right)-4 a x \cos \left(\theta \right) \sin \left(\theta \right) \right)\\
-\det\left(T\right)=&m^2 l^2 \left(\sin\left(\theta\right)-2 a x \cos\left(\theta\right)\right)^2
+&-4 a l^2 \cos \left(\theta \right) \sin \left(\theta \right) x m^2,\nonumber\\
+\det\left(T\right)=&m^2 l^2 \left(\sin\left(\theta\right)^2+4 a^2 x^2 \cos^2\left(\theta\right)-4 a x \cos \left(\theta \right) \sin \left(\theta \right)\right),\\
+\det\left(T\right)=&m^2 l^2 \left(\sin\left(\theta\right)-2 a x \cos\left(\theta\right)\right)^2.
 }
 
 \eq{
-\frac{\textbf{p}^T T^{-1} \textbf{p}}{2}=\frac{m \left(l^2 p_x^2-2 l p_{\theta } p_x \left(\cos \left(\theta \right)+2 a \sin \left(\theta \right) x\right)+p_{\theta }^2 \left(4 a^2 x^2+1\right)\right)}{2 \det \left(T\right)}
+\frac{\textbf{p}^T T^{-1} \textbf{p}}{2}=\frac{m \left(l^2 p_x^2-2 l p_{\theta } p_x \left(\cos \left(\theta \right)+2 a \sin \left(\theta \right) x\right)+p_{\theta }^2 \left(4 a^2 x^2+1\right)\right)}{2 \det \left(T\right)}.
 }
-Finalmente el Hamiltoniano queda asi:
+Finalmente el Hamiltoniano queda as\'i:
 \eq{
-H&=\frac{m \left(l^2 p_x^2-2 l p_{\theta } p_x \left(\cos \left(\theta \right)+2 a \sin \left(\theta \right) x\right)+p_{\theta }^2 \left(4 a^2 x^2+1\right)\right)}{2 \det \left(T\right)}-m g l \cos \left(\theta \right)+m a g x^2\\
-H&=\frac{l^2 p_x^2-2 l p_{\theta } p_x \left(\cos \left(\theta \right)+2 a \sin \left(\theta \right) x\right) +p_{\theta }^2 \left(4 a^2 x^2+1\right)}{2 l^2 m \left(\sin \left(\theta \right)-2 a \cos \left(\theta \right) x\right)^2}-m g l\cos \left(\theta \right)+ m g a x^2
+H&=\frac{m \left(l^2 p_x^2-2 l p_{\theta } p_x \left(\cos \left(\theta \right)+2 a \sin \left(\theta \right) x\right)+p_{\theta }^2 \left(4 a^2 x^2+1\right)\right)}{2 \det \left(T\right)}-m g l \cos \left(\theta \right)+m a g x^2,\\
+H&=\frac{l^2 p_x^2-2 l p_{\theta } p_x \left(\cos \left(\theta \right)+2 a \sin \left(\theta \right) x\right)+p_{\theta }^2 \left(4 a^2 x^2+1\right)}{2 l^2 m \left(\sin \left(\theta \right)-2 a \cos \left(\theta \right) x\right)^2}-m g l\cos \left(\theta \right)+ m g a x^2.
 }
-Ahora con el hamiltoniano hallamos las ecuaciones de Hamilton:
-
-\eq{x'=\frac{\partial H}{\partial p_x}=&\frac{l p_x-\left(\cos \left(\theta \right)+2 a \sin \left(\theta \right) x\right) p_{\theta }}{l m \left(\sin \left(\theta\right)-2 a \cos \left(\theta \right) x\right)^2}\\
-\theta'=\frac{\partial H}{\partial p_\theta}=&\frac{\left(4 a^2 x^2+1\right) p_{\theta }-l \left(\cos \left(\theta \right)+2 a \sin \left(\theta \right) x\right) p_x}{l^2 m \left(\sin \left(\theta \right)-2 a \cos \left(\theta \right) x\right)^2}\\
-p_x'=-\frac{\partial H}{\partial x}=&\frac{2 a}{m} \bigg( -g x m^2+\frac{p_{\theta } \left(l \sin \left(\theta \right) p_x-2 a x p_{\theta   }\right)}{l^2 \left(\sin \theta -2 a x \cos \theta \right)^2}  \\
-&-\frac{\cos \left(\theta \right) \left(l^2 p_x^2-2 l \left(\cos \left(\theta \right)+2 a \sin \left(\theta \right) x\right) p_{\theta }  p_x+\left(4 a^2 x^2+1\right) p_{\theta }^2\right)} {l^2 \left(\sin \left(\theta \right)-2 a \cos \left(\theta \right) x\right)^3} \bigg) 
-\nonumber}
-
+Ahora con el Hamiltoniano hallamos las ecuaciones de Hamilton:
 \eq{
-p_\theta'=-\frac{\partial H}{\partial \theta}=& \frac{1}{l^2 m} \left(-g m^2 \sin \left(\theta \right) l^3+\frac{p_x p_{\theta } l}{2 a \cos \left(\theta \right) x-\sin\left(\theta \right)} \right)\\
- &+\frac{1}{l^2 m} \frac{\left(\cos \left(\theta \right)+2 a \sin \left(\theta \right) x\right) }{\left(\sin \left(\theta \right)-2 a \cos \left(\theta \right) x\right)^3} \nonumber\\
-&\quad \quad \times \left(l^2 p_x^2-2 l\left(\cos \left(\theta \right)+2 a \sin \left(\theta \right) x\right) p_{\theta } p_x+\left(4 a^2 x^2+1\right) p_{\theta }^2\right)\nonumber
+x'=\frac{\partial H}{\partial p_x}&=\frac{l p_x-\left(\cos \left(\theta \right)+2 a \sin \left(\theta \right) x\right) p_{\theta }}{l m \left(\sin \left(\theta\right)-2 a \cos \left(\theta \right) x\right)^2},\\
+\theta'=\frac{\partial H}{\partial p_\theta}&=\frac{\left(4 a^2 x^2+1\right) p_{\theta }-l \left(\cos \left(\theta \right)+2 a \sin \left(\theta \right) x\right) p_x}{l^2 m \left(\sin \left(\theta \right)-2 a \cos \left(\theta \right) x\right)^2},\\
+p_x'=-\frac{\partial H}{\partial x}&=\frac{2 a}{m} \bigg( -g x m^2+\frac{p_{\theta } \left(l \sin \left(\theta \right) p_x-2 a x p_{\theta }\right)}{l^2 \left(\sin \theta -2 a x \cos \theta \right)^2}\\
+&-\frac{\cos \left(\theta \right) \left(l^2 p_x^2-2 l \left(\cos \left(\theta \right)+2 a \sin \left(\theta \right) x\right) p_{\theta }  p_x+\left(4 a^2 x^2+1\right) p_{\theta }^2\right)} {l^2 \left(\sin \left(\theta \right)-2 a \cos \left(\theta \right) x\right)^3} \bigg).\nonumber
 }
 
-La anteriores expresi\'ones para $p_x'$ y $p_\theta'$ se pueden reorganizar asi:
 \eq{
-p_\theta'=&\frac{\left(\cos \left(\theta \right)+2 a \sin \left(\theta \right) x\right) p_x^2}{m \left(\sin \left(\theta \right)-2 a \cos\left(\theta \right) x\right)^3}\\ 
+p_\theta'=-\frac{\partial H}{\partial \theta}&= \frac{1}{l^2 m} \left(-g m^2 \sin \left(\theta \right) l^3+\frac{p_x p_{\theta } l}{2 a \cos \left(\theta \right) x-\sin\left(\theta \right)} \right)\\
+&+\frac{1}{l^2 m} \frac{\left(\cos \left(\theta \right)+2 a \sin \left(\theta \right) x\right)}{\left(\sin \left(\theta \right)-2 a \cos \left(\theta \right) x\right)^3}\nonumber\\
+&\quad \times \left(l^2 p_x^2-2 l\left(\cos \left(\theta \right)+2 a \sin \left(\theta \right) x\right) p_{\theta } p_x+\left(4 a^2 x^2+1\right) p_{\theta }^2\right).\nonumber
+}
+
+Las anteriores expresiones para $p_x'$ y $p_\theta'$ se pueden reorganizar as\'i:
+\eq{
+p_\theta'&=\frac{\left(\cos \left(\theta \right)+2 a \sin \left(\theta \right) x\right) p_x^2}{m \left(\sin \left(\theta \right)-2 a \cos\left(\theta \right) x\right)^3}\\ 
 &+\left(\frac{2 a \cos \left(\theta \right) x-\sin \left(\theta \right)}{l m \left(\sin\left(\theta \right)-2 a \cos \left(\theta \right) x\right)^2}-\frac{2 \left(\cos \left(\theta \right)+2 a \sin \left(\theta \right)x\right)^2}{l m \left(\sin \left(\theta \right)-2 a \cos \left(\theta \right) x\right)^3}\right) p_{\theta }p_x\nonumber\\ 
-&+\frac{\left(\cos \left(\theta \right)+2 a \sin \left(\theta \right) x\right) \left(4 a^2 x^2+1\right)p_{\theta }^2}{l^2 m \left(\sin \left(\theta \right)-2 a \cos \left(\theta \right) x\right)^3}-g l m \sin \left(\theta\right) \nonumber
+&+\frac{\left(\cos \left(\theta \right)+2 a \sin \left(\theta \right) x\right) \left(4 a^2 x^2+1\right)p_{\theta }^2}{l^2 m \left(\sin \left(\theta \right)-2 a \cos \left(\theta \right) x\right)^3}-g l m \sin \left(\theta\right).\nonumber
 }
 \eq{
-p_x'=&-\frac{2 a \cos \left(\theta \right) p_x^2}{m \left(\sin \left(\theta \right)-2 a \cos \left(\theta \right)
-   x\right)^3}\\ 
-&+\left(\frac{2 a \sin \left(\theta \right)}{l m \left(\sin \left(\theta \right)-2 a \cos \left(\theta \right)
-   x\right)^2}+\frac{4 a \cos \left(\theta \right) \left(\cos \left(\theta \right)+2 a \sin \left(\theta \right) x\right)}{l m \left(\sin
-   \left(\theta \right)-2 a \cos \left(\theta \right) x\right)^3}\right) p_{\theta } p_x \nonumber \\ 
-&+\left(-\frac{4 x
-   a^2}{l^2 m \left(\sin \left(\theta \right)-2 a \cos \left(\theta \right) x\right)^2}-\frac{2 \cos \left(\theta \right) \left(4
-   a^2 x^2+1\right) a}{l^2 m \left(\sin \left(\theta \right)-2 a \cos \left(\theta \right) x\right)^3}\right)
-   p_{\theta }^2-2 a g m x \nonumber
+p_x'&=-\frac{2 a \cos \left(\theta \right) p_x^2}{m \left(\sin \left(\theta \right)-2 a \cos \left(\theta \right)x\right)^3}\\ 
+&+\left(\frac{2 a \sin \left(\theta \right)}{l m \left(\sin \left(\theta \right)-2 a \cos \left(\theta \right)x\right)^2}+\frac{4 a \cos \left(\theta \right) \left(\cos \left(\theta \right)+2 a \sin \left(\theta \right) x\right)}{l m \left(\sin\left(\theta \right)-2 a \cos \left(\theta \right) x\right)^3}\right) p_{\theta } p_x\nonumber\\ 
+&+\left(-\frac{4 x a^2}{l^2 m \left(\sin \left(\theta \right)-2 a \cos \left(\theta \right)x\right)^2}-\frac{2 \cos \left(\theta \right) \left(4 a^2 x^2+1\right) a}{l^2 m \left(\sin \left(\theta \right)-2 a \cos \left(\theta \right)x\right)^3}\right)p_{\theta }^2-2 a g m x.\nonumber
 }
+
+
+
