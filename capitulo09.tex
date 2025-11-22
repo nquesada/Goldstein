@@ -1,9 +1,11 @@
 
 
+Aquí tienes el texto corregido con las tildes en LaTeX (`\'`) y la puntuación adecuada en cada ecuación:
 
+```latex
 \subsection*{Ejercicio 9.9}
 
-Sea $u$ una funci\'on de  $r^2,p^2,\textbf{r} \cdot \textbf{p}$. Para mostar que $[u,\textbf{L}]=0$ es suficiente ver que $[r^2,\textbf{L} ]=0$, $[p^2,\textbf{L} ]=0$ y $[\textbf{r} \cdot \textbf{p},\textbf{L} ]=0$ ya que:
+Sea $u$ una funci\'on de $r^2,p^2,\textbf{r} \cdot \textbf{p}$. Para mostrar que $[u,\textbf{L}]=0$ es suficiente ver que $[r^2,\textbf{L}]=0$, $[p^2,\textbf{L}]=0$ y $[\textbf{r} \cdot \textbf{p},\textbf{L}]=0$, ya que:
 \eq{
 [u,\textbf{L}]=&\frac{\partial u}{\partial x_i}\frac{\partial \textbf{L}}{\partial p_i}-\frac{\partial u}{\partial p_i}\frac{\partial \textbf{L}}{\partial x_i}= \\
 =&\left(\frac{\partial u}{\partial (r^2)} \frac{\partial r^2}{\partial x_i}
@@ -16,87 +18,92 @@ Sea $u$ una funci\'on de  $r^2,p^2,\textbf{r} \cdot \textbf{p}$. Para mostar que
 \left(\frac{\partial u}{\partial (p^2)} \left(\frac{\partial p^2}{\partial x_i}  \frac{\partial \textbf{L}}{\partial p_i}- \frac{\partial p^2}{\partial p_i} \frac{\partial \textbf{L}}{\partial x_i}  \right) \right)\\
 &+
 \left(\frac{\partial u}{\partial (\textbf{r} \cdot \textbf{p})} \left(\frac{\partial \textbf{r} \cdot \textbf{p}}{\partial x_i}  \frac{\partial \textbf{L}}{\partial p_i}- \frac{\partial \textbf{r} \cdot \textbf{p}}{\partial p_i} \frac{\partial \textbf{L}}{\partial x_i}  \right) \right) \nonumber \\
-=&\frac{\partial u}{\partial (r^2)} [r^2,\textbf{L}]+\frac{\partial u}{\partial (p^2)} [p^2,\textbf{L}]+\frac{\partial u}{\partial (\textbf{r} \cdot \textbf{p})} [\textbf{r} \cdot \textbf{p},\textbf{L}]
+=&\frac{\partial u}{\partial (r^2)} [r^2,\textbf{L}]+\frac{\partial u}{\partial (p^2)} [p^2,\textbf{L}]+\frac{\partial u}{\partial (\textbf{r} \cdot \textbf{p})} [\textbf{r} \cdot \textbf{p},\textbf{L}].
 }
 Ahora calculemos los corchetes de Poisson de la anterior expresi\'on:
 \eq{
-[x_l x_l, \epsilon_{i j k}x_i p_j]=&\epsilon_{i j k}([x_l x_l, x_i]p_j+x_i [x_l x_l,p_j])\\
-=&-\epsilon_{i j k}(p_j([x_i,x_l]x_l+x_l [x_i,x_l])+x_i([p_j,x_l]x_l+x_l[p_i,x_l]))\nonumber
+[x_l x_l, \epsilon_{i j k}x_i p_j]=&\epsilon_{i j k}([x_l x_l, x_i]p_j+x_i [x_l x_l,p_j]),\\
+=&-\epsilon_{i j k}(p_j([x_i,x_l]x_l+x_l [x_i,x_l])+x_i([p_j,x_l]x_l+x_l[p_i,x_l])).\nonumber
 }
-Pero $[x_i,x_j]=[p_i,p_j]=0$ y $[x_i,p_j]=-[p_j,x_i]=\delta_{ij}$. Asi entonces:
+Pero $[x_i,x_j]=[p_i,p_j]=0$ y $[x_i,p_j]=-[p_j,x_i]=\delta_{ij}$. As\'i entonces:
 \eq{
-[x_l x_l, \epsilon_{i j k}x_i p_j]=-\epsilon_{i j k} (2 x_i x_l [p_j,x_l])=2 \epsilon_{i j k} x_i x_j=\epsilon_{i j k} x_i x_j+\epsilon_{j i k} x_j x_i=0
+[x_l x_l, \epsilon_{i j k}x_i p_j]=-\epsilon_{i j k} (2 x_i x_l [p_j,x_l])=2 \epsilon_{i j k} x_i x_j=\epsilon_{i j k} x_i x_j+\epsilon_{j i k} x_j x_i=0.
 }
 Para el segundo t\'ermino tenemos:
 \eq{
 [p_l p_l, \epsilon_{i j k} x_i p_j]=&\epsilon_{i j k} (p_j [p_l p_l,x_i]+x_i [p_l p_l,p_j])=-\epsilon_{i j k} (p_j [x_i,p_l p_l]) \nonumber \\
-=&-\epsilon_{i j k} 2 p_j p_l [x_i,p_l]=-2 \epsilon_{i j k} p_j p_i=0
+=&-\epsilon_{i j k} 2 p_j p_l [x_i,p_l]=-2 \epsilon_{i j k} p_j p_i=0.
 }
 Finalmente:
-\eq{[x_l p_l, \epsilon_{i j k} x_i p_j]=&\epsilon_{i j k} ([x_l p_l,x_i]p_j+x_i [x_l p_l,p_j]) \nonumber\\
+\eq{
+[x_l p_l, \epsilon_{i j k} x_i p_j]=&\epsilon_{i j k} ([x_l p_l,x_i]p_j+x_i [x_l p_l,p_j]) \nonumber\\
 =&-\epsilon_{i j k}(p_j([x_i,x_l]p_l+x_l [x_i,p_l])+x_i ([p_j,x_l]p_l+x_l[p_j,p_l])) \nonumber \\
-=&-\epsilon_{i j k} p_j x_i+\epsilon_{i j k} x_i p_j =0}
-
-Si $\textbf{F}=u \textbf{r}+v\textbf{p}+w \textbf{r} \times \textbf{p} $ donde $u,v,w$ son funciones del mismo tipo que las del literal anterior, se pide mostrar que $[F_i,L_j]=\epsilon_{i j k} F_k$. Para ver lo anterior calculemos por separado los siguientes expresiones:
-\eq{
-[u x_i, L_j]=u [x_i,L_j]\\
-[v p_i, L_j]=v [p_i,L_j]\\
-[w L_i, L_j]=w [L_i,L_j] 
+=&-\epsilon_{i j k} p_j x_i+\epsilon_{i j k} x_i p_j =0.
 }
-ya que $[u,L_j]=[v,L_j]=[w,L_j]=0$. Ahora basta calcular las anteriores expresiones
+
+Si $\textbf{F}=u \textbf{r}+v\textbf{p}+w \textbf{r} \times \textbf{p}$, donde $u,v,w$ son funciones del mismo tipo que las del literal anterior, se pide mostrar que $[F_i,L_j]=\epsilon_{i j k} F_k$. Para ver lo anterior calculemos por separado las siguientes expresiones:
 \eq{
-[x_l,\epsilon_{i j k} x_i p_j]&=\epsilon_{i j k} (p_j [x_l,x_i]+x_i[x_l,p_j])=\epsilon_{i l k} x_i\\
-[p_l,\epsilon_{i j k} x_i p_j]&=\epsilon_{i j k} (x_i [p_l,p_j]+p_j [p_l,x_i])=-\epsilon_{l j k} p_j =\epsilon_{j l k} p_j \\
+[u x_i, L_j]=u [x_i,L_j],\\
+[v p_i, L_j]=v [p_i,L_j],\\
+[w L_i, L_j]=w [L_i,L_j],
+}
+ya que $[u,L_j]=[v,L_j]=[w,L_j]=0$. Ahora basta calcular las anteriores expresiones:
+\eq{
+[x_l,\epsilon_{i j k} x_i p_j]&=\epsilon_{i j k} (p_j [x_l,x_i]+x_i[x_l,p_j])=\epsilon_{i l k} x_i,\\
+[p_l,\epsilon_{i j k} x_i p_j]&=\epsilon_{i j k} (x_i [p_l,p_j]+p_j [p_l,x_i])=-\epsilon_{l j k} p_j =\epsilon_{j l k} p_j,\\
 [\epsilon_{l m i} x_l p_m,\epsilon_{a b j} x_a p_b]&=\epsilon_{l m i} \epsilon_{a b j} (x_a [x_l p_m,p_b]+p_b [x_l p_m,x_a])\\
 &=-\epsilon_{l m i} \epsilon_{a b j} (x_a ([p_b,x_l]p_m)+p_b ([x_a,p_m]x_l))\nonumber \\
-&=-\epsilon_{l m i} \epsilon_{a b j} (-x_a p_m \delta_{bl}+\delta_{am}p_b x_l)  \nonumber
+&=-\epsilon_{l m i} \epsilon_{a b j} (-x_a p_m \delta_{bl}+\delta_{am}p_b x_l).  \nonumber
 }
-Finalmente
+Finalmente:
 \eq{
 [L_i,L_j]=\epsilon_{l m i} \epsilon_{a b j} \delta_{b l} x_a p_m-\epsilon_{l m i} \epsilon_{a b j} \delta_{a m} p_b x_l=
-\epsilon_{l m i} \epsilon_{a l j}  x_a p_m-\epsilon_{l m i} \epsilon_{m b j}  p_b x_l=\epsilon_{i j k}L_k
+\epsilon_{l m i} \epsilon_{a l j}  x_a p_m-\epsilon_{l m i} \epsilon_{m b j}  p_b x_l=\epsilon_{i j k}L_k.
 }
-Reuniendo todo lo anterior
+Reuniendo todo lo anterior:
 \eq{
-[F_i,L_j]=u \epsilon_{i j k} x_k+v \epsilon_{i j k} p_k+\epsilon_{i j k} w L_k
+[F_i,L_j]=u \epsilon_{i j k} x_k+v \epsilon_{i j k} p_k+\epsilon_{i j k} w L_k.
 }
+
 \subsection*{Ejercicio 9.28}
-Para este problema tenemos que los momentos canonicos estan dados por
+Para este problema tenemos que los momentos can\'onicos est\'an dados por:
 \eq{
-p_k=m \dot x_k +\frac{q}{2} \epsilon_{ijk} B_i x_j
+p_k=m \dot x_k +\frac{q}{2} \epsilon_{ijk} B_i x_j.
 }
-De estos se obtiene facilmente que
+De estos se obtiene f\'acilmente que:
 \eq{
-v_k=\dot x_k=\frac{p_k-\frac{q}{2} \epsilon_{ijk} B_i x_j}{m}
+v_k=\dot x_k=\frac{p_k-\frac{q}{2} \epsilon_{ijk} B_i x_j}{m}.
 }
-As\'i entonces
+As\'i entonces:
 \eq{
-\left[v_k,v_l\right]=&\left[\frac{p_k-\frac{q}{2} \epsilon_{ijk} B_i x_j}{m},\frac{p_l-\frac{q}{2} \epsilon_{abl} B_a x_b}{m}\right]\\
-=&\frac{1}{m^2}\left(\left[p_k,-\frac{q}{2} \epsilon_{abl} B_a x_b\right]-\left[\frac{q}{2} \epsilon_{ijk} B_i x_j,p_l\right]\right)\\
-=&\frac{1}{m^2}\left(-\frac{q}{2}\epsilon_{abl} B_a \left[p_k,x_b\right]-\frac{q}{2} \epsilon_{ijk} B_i \left[x_j,p_l\right]\right)\\
-=&\frac{1}{m^2}\left(\frac{q}{2}\epsilon_{abl} B_a \delta_{kb}-\frac{q}{2} \epsilon_{ijk} B_i \delta_{jl}\right)=\frac{1}{m^2}\left(\frac{q}{2}\epsilon_{akl} B_a-\frac{q}{2} \epsilon_{ilk} B_i\right)\\
-=&\frac{1}{m^2}\frac{q}{2} \left(\epsilon_{akl} B_a+\epsilon_{ikl} B_i\right)=\frac{q}{m^2} \epsilon_{akl} B_a
+\left[v_k,v_l\right]=&\left[\frac{p_k-\frac{q}{2} \epsilon_{ijk} B_i x_j}{m},\frac{p_l-\frac{q}{2} \epsilon_{abl} B_a x_b}{m}\right],\\
+=&\frac{1}{m^2}\left(\left[p_k,-\frac{q}{2} \epsilon_{abl} B_a x_b\right]-\left[\frac{q}{2} \epsilon_{ijk} B_i x_j,p_l\right]\right),\\
+=&\frac{1}{m^2}\left(-\frac{q}{2}\epsilon_{abl} B_a \left[p_k,x_b\right]-\frac{q}{2} \epsilon_{ijk} B_i \left[x_j,p_l\right]\right),\\
+=&\frac{1}{m^2}\left(\frac{q}{2}\epsilon_{abl} B_a \delta_{kb}-\frac{q}{2} \epsilon_{ijk} B_i \delta_{jl}\right)=\frac{1}{m^2}\left(\frac{q}{2}\epsilon_{akl} B_a-\frac{q}{2} \epsilon_{ilk} B_i\right),\\
+=&\frac{1}{m^2}\frac{q}{2} \left(\epsilon_{akl} B_a+\epsilon_{ikl} B_i\right)=\frac{q}{m^2} \epsilon_{akl} B_a.
 }
-Por otro lado
+Por otro lado:
 \eq{
-\left[x_l,v_k\right]&=\left[x_l,\frac{p_k-\frac{q}{2} \epsilon_{ijk} B_i x_j}{m}\right]=\frac{\delta_{lk}}{m}\\
-\left[p_l,\dot x_k\right]&=\frac{p_k-\frac{q}{2} \epsilon_{ijk} B_i x_j}{m}=\frac{-q \epsilon_{ijk} B_i }{2m} \left[p_l,x_j\right]=\frac{q \epsilon_{ijk} B_i }{2m}\delta_{l j}=\frac{q \epsilon_{ilk} B_i }{2m}\\
-\left[x_k,\dot p_l\right]&=\left[x_k,\left[p_l,H\right]\right]=-\left[H,\left[x_k,p_l\right]\right]-\left[p_l,\left[H,x_k\right]\right]=-\left[p_l,-\dot x_k\right]=\left[p_l,\dot x_k\right]=\frac{q \epsilon_{ilk} B_i }{2m}
+\left[x_l,v_k\right]&=\left[x_l,\frac{p_k-\frac{q}{2} \epsilon_{ijk} B_i x_j}{m}\right]=\frac{\delta_{lk}}{m},\\
+\left[p_l,\dot x_k\right]&=\frac{p_k-\frac{q}{2} \epsilon_{ijk} B_i x_j}{m}=\frac{-q \epsilon_{ijk} B_i }{2m} \left[p_l,x_j\right]=\frac{q \epsilon_{ijk} B_i }{2m}\delta_{l j}=\frac{q \epsilon_{ilk} B_i }{2m},\\
+\left[x_k,\dot p_l\right]&=\left[x_k,\left[p_l,H\right]\right]=-\left[H,\left[x_k,p_l\right]\right]-\left[p_l,\left[H,x_k\right]\right]=-\left[p_l,-\dot x_k\right]=\left[p_l,\dot x_k\right]=\frac{q \epsilon_{ilk} B_i }{2m}.
 }
 Para el \'ultimo c\'alculo es necesario encontrar una expresi\'on para $\dot p_a$, para esto usamos las ecuaciones de Hamilton:
 \eq{
-H=\frac{\left(p_i-\frac{q}{2} B_j x_k \epsilon_{ijk}\right)\left(p_i-\frac{q}{2} B_l x_n \epsilon_{iln}\right)}{2m}
+H=\frac{\left(p_i-\frac{q}{2} B_j x_k \epsilon_{ijk}\right)\left(p_i-\frac{q}{2} B_l x_n \epsilon_{iln}\right)}{2m}.
 }
-Con estas se encuentran facilmente los $\dot p_a$:
+Con estas se encuentran f\'acilmente los $\dot p_a$:
 \eq{
 \dot p_a=-\frac{\partial H}{\partial x_a}=
 \frac{q}{2} B_l \epsilon_{ila} \left(p_i-\frac{q}{2} B_j x_k \epsilon_{ijk}\right) +
-\frac{q}{2} B_j \epsilon_{ija} \left(p_i-\frac{q}{2} B_l x_n \epsilon_{iln}\right) }
-y se calcula el corchete de Poisson:
-\eq{
-\left[p_b,\dot p_a\right]=&\frac{1}{2m}\left(-\frac{q^2}{4} B_j B_l \epsilon_{ijk} \epsilon_{ila} \left[p_b,x_k\right]-\frac{q^2}{4} B_l B_j \epsilon_{iln} \epsilon_{ija} \left[p_b,x_n\right]                \right)\\
-=&\frac{q^2}{8m} B_l B_j (\epsilon_{ijb} \epsilon_{ila}+\epsilon_{ilb}\epsilon_{ija})=\frac{q^2}{4m}(B_l B_l \delta_{ba}-B_a B_b ) 
+\frac{q}{2} B_j \epsilon_{ija} \left(p_i-\frac{q}{2} B_l x_n \epsilon_{iln}\right).
 }
+Y se calcula el corchete de Poisson:
+\eq{
+\left[p_b,\dot p_a\right]=&\frac{1}{2m}\left(-\frac{q^2}{4} B_j B_l \epsilon_{ijk} \epsilon_{ila} \left[p_b,x_k\right]-\frac{q^2}{4} B_l B_j \epsilon_{iln} \epsilon_{ija} \left[p_b,x_n\right]\right),\\
+=&\frac{q^2}{8m} B_l B_j (\epsilon_{ijb} \epsilon_{ila}+\epsilon_{ilb}\epsilon_{ija})=\frac{q^2}{4m}(B_l B_l \delta_{ba}-B_a B_b).
+}
+
 
 
 
@@ -105,49 +112,50 @@ y se calcula el corchete de Poisson:
 
 
 \subsection*{Ejercicio 9.30}
-Supongamos que $Q, R$ son constantes de movimiento entonces::
+Supongamos que $Q, R$ son constantes de movimiento, entonces:
 \eq{
-[Q,H]&=-\frac{\partial Q}{\partial t}\\
-[R,H]&=-\frac{\partial R}{\partial t}
+[Q,H]&=-\frac{\partial Q}{\partial t},\\
+[R,H]&=-\frac{\partial R}{\partial t}.
 }
 Evaluemos las siguientes cantidades:
 \eq{
-[[Q,R],H]=&[R,[H,Q]]+[Q,[R,H]]=[R,\frac{\partial Q}{\partial t}]+[Q,-\frac{\partial R}{\partial t}]=\\
-&\frac{\partial R}{\partial x_i}\frac{\partial }{\partial p_i}\left(\frac{\partial Q}{\partial t} \right)-\frac{\partial}{\partial x_i} \left(\frac{\partial Q}{\partial t} \right) \frac{\partial  R }{\partial p_i}-\frac{\partial Q}{\partial x_i}\frac{\partial }{\partial p_i}\left(\frac{\partial R}{\partial t} \right)+\frac{\partial}{\partial x_i} \left(\frac{\partial R}{\partial t} \right) \frac{\partial  Q }{\partial p_i}
+[[Q,R],H]=&[R,[H,Q]]+[Q,[R,H]]=[R,\frac{\partial Q}{\partial t}]+[Q,-\frac{\partial R}{\partial t}],\\
+&\frac{\partial R}{\partial x_i}\frac{\partial }{\partial p_i}\left(\frac{\partial Q}{\partial t} \right)-\frac{\partial}{\partial x_i} \left(\frac{\partial Q}{\partial t} \right) \frac{\partial  R }{\partial p_i}-\frac{\partial Q}{\partial x_i}\frac{\partial }{\partial p_i}\left(\frac{\partial R}{\partial t} \right)+\frac{\partial}{\partial x_i} \left(\frac{\partial R}{\partial t} \right) \frac{\partial  Q }{\partial p_i}.
 \nonumber
 }
 Por otro lado:
 \eq{
 -\frac{\partial [Q,R]}{\partial t}&=-\frac{\partial }{\partial t}\left( 
-\frac{\partial Q}{\partial x_i}\frac{\partial R}{\partial p_i}-\frac{\partial Q}{\partial p_i}\frac{\partial R}{\partial x_i} \right)\\
-&=\frac{\partial R}{\partial x_i}\frac{\partial }{\partial t}\left(\frac{\partial Q}{\partial p_i} \right)-\frac{\partial}{\partial t} \left(\frac{\partial Q}{\partial x_i} \right) \frac{\partial  R }{\partial p_i}-\frac{\partial Q}{\partial x_i}\frac{\partial }{\partial t}\left(\frac{\partial R}{\partial p_i} \right)+\frac{\partial}{\partial t} \left(\frac{\partial R}{\partial x_i} \right) \frac{\partial  Q }{\partial p_i}
+\frac{\partial Q}{\partial x_i}\frac{\partial R}{\partial p_i}-\frac{\partial Q}{\partial p_i}\frac{\partial R}{\partial x_i} \right),\\
+&=\frac{\partial R}{\partial x_i}\frac{\partial }{\partial t}\left(\frac{\partial Q}{\partial p_i} \right)-\frac{\partial}{\partial t} \left(\frac{\partial Q}{\partial x_i} \right) \frac{\partial  R }{\partial p_i}-\frac{\partial Q}{\partial x_i}\frac{\partial }{\partial t}\left(\frac{\partial R}{\partial p_i} \right)+\frac{\partial}{\partial t} \left(\frac{\partial R}{\partial x_i} \right) \frac{\partial  Q }{\partial p_i}.
 }
 Para ver que $[Q,R]$ es constante de movimiento es suficiente comparar las 2 \'ultimas expresiones y notar que las derivadas parciales conmutan.
 
-
-Para mostrar que si $F$ y $H$ son constantes de movimiento entonces $\frac{\partial^n F}{\partial t^n}$ es constante de movimiento basta notar que $[F,H]=-\frac{\partial F}{\partial t}$ es constante de movimiento \emph{i.e}
+Para mostrar que si $F$ y $H$ son constantes de movimiento entonces $\frac{\partial^n F}{\partial t^n}$ es constante de movimiento, basta notar que $[F,H]=-\frac{\partial F}{\partial t}$ es constante de movimiento, \emph{i.e.}:
 \eq{
-\frac{d[F,H]}{dt}=\frac{d}{dt}\left ( -\frac{\partial F}{\partial t} \right)=0
+\frac{d[F,H]}{dt}=\frac{d}{dt}\left( -\frac{\partial F}{\partial t} \right)=0.
 }
-Para probar que esto cierto para la $n$-esima derivada se usa inducci\'on:\\
-Se probo para $n=1$ se cumple i.e. : $\frac{d}{dt}\left ( -\frac{\partial F}{\partial t} \right)=0$\\
-Ahora supongamos que se cumple para $n$ es decir: $\frac{d}{dt}\left (\frac{\partial^n F}{\partial t^n} \right)=[\frac{\partial^n F}{\partial t^n},H]+\frac{\partial^{n+1} F}{\partial t^{n+1}}=0$ pero como por hipotesis $\frac{\partial^n F}{\partial t^n}$ es constante de movimiento entonces $[\frac{\partial^n F}{\partial t^n},H]$ tambien lo es y por lo tanto $\frac{\partial^{n+1} F}{\partial t^{n+1}}=-[\frac{\partial^n F}{\partial t^n},H]$ tambien es constante de movimiento.
+Para probar que esto es cierto para la $n$-\'esima derivada se usa inducci\'on:\\
+Se prob\'o para $n=1$, se cumple \emph{i.e.}: $\frac{d}{dt}\left( -\frac{\partial F}{\partial t} \right)=0$.\\
+Ahora supongamos que se cumple para $n$, es decir: $\frac{d}{dt}\left( \frac{\partial^n F}{\partial t^n} \right)=[\frac{\partial^n F}{\partial t^n},H]+\frac{\partial^{n+1} F}{\partial t^{n+1}}=0$, pero como por hip\'otesis $\frac{\partial^n F}{\partial t^n}$ es constante de movimiento, entonces $[\frac{\partial^n F}{\partial t^n},H]$ tambi\'en lo es y por lo tanto $\frac{\partial^{n+1} F}{\partial t^{n+1}}=-[\frac{\partial^n F}{\partial t^n},H]$ tambi\'en es constante de movimiento.
 \\
 \\
-Finalmente tomando $F=x-\frac{pt}{m}$ y $H=\frac{p^2}{2m}$ se verifica facilmente que:
+Finalmente, tomando $F=x-\frac{pt}{m}$ y $H=\frac{p^2}{2m}$ se verifica f\'acilmente que:
 \eq{
-\left[x-\frac{pt}{m},\frac{p^2}{2m}\right]=\left[x,\frac{p^2}{2m}\right]=\frac{2p}{2m}\left[x,p\right]=\frac{2p}{2m}=-\frac{\partial F}{\partial t}=-\left(-\frac{p}{m}\right)\frac{\partial t}{\partial t}=\frac{p}{m}
+\left[x-\frac{pt}{m},\frac{p^2}{2m}\right]=\left[x,\frac{p^2}{2m}\right]=\frac{2p}{2m}\left[x,p\right]=\frac{2p}{2m}=-\frac{\partial F}{\partial t}=-\left(-\frac{p}{m}\right)\frac{\partial t}{\partial t}=\frac{p}{m}.
 }
-
 
 \subsection*{Ejercicio 9.31}
 Sea $u=\ln (p+i m \omega q)-i \omega t$ y $H=\frac{p^2}{2 m}+\frac{1}{2} m
-   \omega^2 q^2 $
+   \omega^2 q^2$.\\
 Entonces:
 \eq{
 [u,H]=&\frac{\partial u}{\partial q}\frac{\partial H}{\partial p}-\frac{\partial H}{\partial q}\frac{\partial u}{\partial p}=\left( \frac{i m \omega }{p+i m q
-   \omega } \right)\frac{p}{m}-m q \omega ^2 \left( \frac{1}{p+i m q \omega }\right)=i\omega
+   \omega } \right)\frac{p}{m}-m q \omega ^2 \left( \frac{1}{p+i m q \omega }\right)=i\omega.
 }
-Por otro lado claramente $\frac{\partial u}{\partial t}=-i \omega$, por lo tanto $u$ es una constante de movimiento.\\
-Como sabemos las soluciones explicitas del problema podemos ver que es exactamente $u$. Si $q=A \sin (\omega t+\phi)$ entonces $p=m \omega A \cos( \omega t+\phi)$ y la cantidad dentro del logaritmo es: $m \omega A e^{i (\omega t +\phi)}$. De acuerdo a lo anterior $u=\ln m \omega A+i (\omega t +\phi)-i \omega t=i\phi+\ln \sqrt{2 E m}$, donde se ha usado que $E=\frac{1}{2} m \omega^2 A^2$. $u$ no es mas que el logaritmo de una funci\'on de la energ\'ia mas $i$ veces la fase inicial del oscilador.
-
+Por otro lado, claramente $\frac{\partial u}{\partial t}=-i \omega$, por lo tanto $u$ es una constante de movimiento.\\
+Como sabemos las soluciones expl\'icitas del problema, podemos ver que es exactamente $u$. Si $q=A \sin (\omega t+\phi)$ entonces $p=m \omega A \cos( \omega t+\phi)$ y la cantidad dentro del logaritmo es: $m \omega A e^{i (\omega t +\phi)}$. De acuerdo a lo anterior:
+\[
+u=\ln m \omega A+i (\omega t +\phi)-i \omega t=i\phi+\ln \sqrt{2 E m},
+\]
+donde se ha usado que $E=\frac{1}{2} m \omega^2 A^2$. $u$ no es m\'as que el logaritmo de una funci\'on de la energ\'ia m\'as $i$ veces la fase inicial del oscilador.
