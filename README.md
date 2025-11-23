@@ -1,1 +1,3 @@
-Estas son mis soluciones a algunos de los problemas del libro [Classical Mechanics de Herbert Goldstein (2da Edicion)](http://www.amazon.com/Classical-Mechanics-3rd-Herbert-Goldstein/dp/0201657023/ref=sr_1_1?ie=UTF8&qid=1435283484&sr=8-1&keywords=classical+mechanics+goldstein+second+edition). Las soluciones estan organizadas por capítulos. El PDF compilado esta [aqui](http://nquesada.github.io/repo/solutions.pdf)
+# Soluciones de Classical Mechanics
+
+Estas son mis soluciones a algunos de los problemas del libro [Classical Mechanics de Herbert Goldstein (3ra Edicion)](https://search.worldcat.org/title/47056311). Las soluciones estan organizadas por capítulos. El PDF compilado esta [aqui](http://nquesada.github.io/misc/solutions.pdf)
