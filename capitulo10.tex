@@ -12,11 +12,11 @@ Esto se hace directamente calculando las derivadas que aparecen en la anterior e
 La \'ultima igualdad se obtiene al tener en cuenta que $1+\cot^2 z=\csc^2 z$ y que $\cot z \csc z= \cos z \csc^2 z$. Por otro lado:
 \eq{
 \frac{\partial S}{\partial t}=-\frac{1}{2} m \omega ^2 \left(q^2-2 \alpha  \cos (t
-   \omega ) q+\alpha ^2\right) \csc ^2(t \omega ).
+   \omega ) q+\alpha ^2\right) \csc ^2(\omega t ).
 }
 Comparando las 2 \'ultimas igualdades se ve que la $S$ dada es efectivamente soluci\'on de la ecuaci\'on de Hamilton-Jacobi. Conocida $S$ podemos escribir las ecuaciones de transformaci\'on:
 \eq{
-p=&m q \omega \cot (\omega t)-m \alpha  \omega  \csc (t \omega ) \Rightarrow \alpha =q \cos (\omega t)-\frac{p \sin (\omega t)}{m \omega },\\
+p=&m q \omega \cot (\omega t)-m \alpha  \omega  \csc (\omega t ) \Rightarrow \alpha =q \cos (\omega t)-\frac{p \sin (\omega t)}{m \omega },\\
 \beta =&m \omega(\alpha \cos (\omega t)-q) \csc (\omega t).
 }
 Para mostrar que la $S$ dada genera la soluci\'on correcta del problema del oscilador arm\'onico lo primero que hay que notar que tanto el nuevo momento conjugado $\alpha$ como su coordenada generalizada $\beta$ son constantes de movimiento y por lo tanto podemos escribir:
@@ -26,18 +26,18 @@ Para mostrar que la $S$ dada genera la soluci\'on correcta del problema del osci
 }
 El valor de $\alpha(t_0)$ puede ser sustituido en la \'ultima ecuaci\'on para obtener:
 \eq{
-&\cot (t \omega ) \left(\cos (t_0 \omega) q(t_0)-\frac{p(t_0) \sin (t_0 \omega )}{m \omega }\right)-  \csc (t \omega) q,\\
-&\quad  =\cot (t_0 \omega ) \left(\cos 
-   (t_0 \omega ) q(t_0)-\frac{p(t_0) \sin (t_0 \omega )}{m \omega }\right)-\csc (t_0 \omega ) q(t_0). \nonumber
+&\cot (\omega t ) \left(\cos (\omega t_0) q(t_0)-\frac{p(t_0) \sin (\omega t_0 )}{m \omega }\right)-  \csc (\omega t) q,\\
+&\quad  =\cot (\omega t_0 ) \left(\cos 
+   (\omega t_0 ) q(t_0)-\frac{p(t_0) \sin (\omega t_0 )}{m \omega }\right)-\csc (\omega t_0 ) q(t_0). \nonumber
 }
 De la anterior ecuaci\'on se puede obtener $q$ as\'i:
 \eq{
-q=\cos ((t-t_0) \omega ) q(t_0)+\frac{p(t_0) \sin ((t-t_0) \omega )}{m \omega }.
+q=\cos (\omega (t-t_0) ) q(t_0)+\frac{p(t_0) \sin (\omega (t-t_0) )}{m \omega }.
 }
 Para obtener $p$ basta igualar $\alpha=\alpha(t_0)$, despejar $p$ y sustituir la expresi\'on anterior para obtener:
 \eq{
-p=&\csc (t \omega ) (m \omega  \cos (t \omega ) q-m\omega \cos ( \omega t_0) q(t_0)+p(t_0) \sin (t_0 \omega )),\\
-=&\cos ((t-t_0) \omega ) p(t_0)-m \omega q(t_0) \sin ((t-t_0) \omega ).
+p=&\csc (\omega t ) (m \omega  \cos (\omega t ) q-m\omega \cos ( \omega t_0) q(t_0)+p(t_0) \sin (\omega t_0 )),\\
+=&\cos (\omega (t-t_0) ) p(t_0)-m \omega q(t_0) \sin (\omega (t-t_0) ).
 }
 Que es evidentemente la soluci\'on al problema.
 
