@@ -150,14 +150,9 @@ Entonces:
    \omega } \right)\frac{p}{m}-m q \omega ^2 \left( \frac{1}{p+i m q \omega }\right)=i\omega.
 }
 Por otro lado, claramente $\frac{\partial u}{\partial t}=-i \omega$, por lo tanto $u$ es una constante de movimiento.\\
-Como sabemos las soluciones expl\'icitas del problema, podemos ver que es exactamente $u$. Si $q=A \sin (\omega (t-t_0))$ entonces $p=m \omega A \cos( \omega (t-t_0))$ y la cantidad dentro del logaritmo es: $m \omega A e^{i (\omega (t-t_0))}$. De acuerdo a lo anterior:
-\[
-u=\ln m \omega A+i (\omega (t -t_0))-i \omega t=-i\omega t_0+\ln \sqrt{2 E m},
-\]
-donde se ha usado que $E=\frac{1}{2} m \omega^2 A^2$. $u$ no es m\'as que el logaritmo de una funci\'on de la energ\'ia m\'as $i$ veces la fase inicial del oscilador.
-
-A partir de este c\'alculo tambi\'en podemos obtener que:
+Como sabemos las soluciones expl\'icitas del problema, podemos ver que es exactamente $u$,
 \eq{
-[u,H] = [-i \omega t_0 + \ln \sqrt{2 E m}, H] = [-i \omega t_0, H] + [\ln \sqrt{2 E m}, H].
+q(t) &= q_0 \cos \omega (t-t_0) + \frac{p_0}{m \omega } \sin \omega (t-t_0), \\
+p(t) &= p_0 \cos \omega (t-t_0)- q_0 m \omega  \sin \omega (t-t_0),\\
+u &= \ln (p(t)+i m \omega q(t)) - \omega t = -i \omega t_0  +\ln \left(p_0+i m \omega q_0  \right).
 }
-El segundo t\'ermino es cero y as\'i obtenemos $[-i \omega t_0, H] = i \omega$, o de manera m\'as sencilla encontramos que formalmente $[H,t_0]=1$.
